@@ -4,7 +4,7 @@
   height: 60px;
   border-radius: 16px;
   display: flex;
-  transition: 0.5s ease-in;
+  transition: 0.5s cubic-bezier(0.66, 0, 0.34, 1);
   transition-delay: 2s;
   justify-content: center;
   position: absolute;
@@ -115,7 +115,7 @@
     z-index: 20;
     bottom: 0;
 }
- .dockpuller:hover .dock {
+.dock.show {
     margin-bottom: 80px;
     transition: 0.5s ease-in;
 }

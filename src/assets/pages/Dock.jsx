@@ -3,6 +3,16 @@ import "../css/dock.css";
 
 const Dock = () => {
   useEffect(() => {
+    let dockpuller = document.querySelector('.dockpuller');
+    let dock = document.querySelector('.dock');
+    dockpuller.addEventListener("mouseover", function(event) {
+            dock.classList.add('show');
+    })
+
+    dock.addEventListener("mouseleave", function(event) {
+      setInterval(
+      dock.classList.remove('show'));
+    }, 3000);
    let icons = document.querySelectorAll(".ico");
 let length = icons.length;
 
