@@ -1,0 +1,10 @@
+.topbar {
+    position: absolute;
+    top: 0;
+    height: 25px;
+    width: 100%;
+    background-color: hsla(var(--app-color-light-hsl),.3);
+    color: var(--app-color-light-contrast);
+    fill: var(--app-color-light-contrast);
+    padding: 0px 10px;
+}

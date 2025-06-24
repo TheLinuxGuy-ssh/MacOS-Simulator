@@ -1,0 +1,49 @@
+.apple-logo {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100000000000;
+}
+
+.loader {
+  transition: 2s ease-in-out;
+}
+.loaderback {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 100000;
+  animation-delay: 5s;
+  animation: disappear 1s ease;
+}
+.progressloader {
+background: rgba(255,255,255,0.1);
+justify-content: flex-start;
+border-radius: 100px;
+align-items: center;
+z-index: 1000000;
+border: 1px solid #5f5f5f;
+position: absolute;
+animation-delay: 5s;
+animation: disappear 1s ease;
+top: 60%;
+left: 50%;
+
+transform: translate3d(-50%, -50%, 0);
+display: flex;
+height: 5px;
+width: 250px;
+}
+
+.progressloader-value {
+animation: load 5s normal forwards;
+box-shadow: 0 10px 40px -10px #fff;
+border-radius: 100px;
+background: #fff;
+height: 5px;
+width: 0;
+}
