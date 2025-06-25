@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.1.0",
+    "@radix-ui/themes": "^3.2.1",
     "react-dom": "^19.1.0",
     "react-draggable": "^4.4.6"
   },

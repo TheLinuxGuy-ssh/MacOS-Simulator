@@ -11,3 +11,15 @@
     padding: 0px 10px;
     border-bottom: 1px solid #5f5f5f;
 }
+.topbar .rt-BaseButton:where(.rt-r-size-2) {
+    --base-button-classic-active-padding-top: 2px;
+    --base-button-height: 100% !important;
+    outline: 0 !important;
+    border-radius: max(var(--radius-2), var(--radius-full));
+    color: #fff;
+    font-size: 10px;
+    font-weight: 100;
+}
+.topbar .rt-BaseButton:where(.rt-r-size-2)[data-state="open"] {
+    background-color: #5f5f5f;
+}

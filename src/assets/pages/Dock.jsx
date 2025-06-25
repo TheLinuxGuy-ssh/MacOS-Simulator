@@ -5,7 +5,7 @@ const Dock = () => {
   useEffect(() => {
     let dockpuller = document.querySelector('.dockpuller');
     let dock = document.querySelector('.dock');
-    dockpuller.addEventListener("mouseover", function(event) {
+    dockpuller.addEventListener("mouseenter", function(event) {
             dock.classList.add('show');
     })
 
