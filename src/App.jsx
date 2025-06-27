@@ -1,6 +1,5 @@
 import "./App.css";
 import "./assets/css/animate.css";
-import "./assets/components/Drop";
 import Wallpaper from "./assets/pages/Wallpaper";
 import Splash from "./assets/pages/Splash";
 import Topbar from "./assets/pages/Topbar";
