@@ -1,8 +1,5 @@
 const Wallpaper = () => {
-    return (
-        <div className="wallpaper">
-        </div>
-    )
-}
+  return <div className="wallpaper"></div>;
+};
 
 export default Wallpaper;
