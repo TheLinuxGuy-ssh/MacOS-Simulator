@@ -1,28 +1,31 @@
 import { useEffect } from "react";
 import apps from "../data/config.json"
+import "../css/dock.css";
 
 const Dock = () => {
   useEffect(() => {
     let dockpuller = document.querySelector(".dockpuller");
     let dock = document.querySelector(".dock");
     dockpuller.addEventListener("mouseenter", function (event) {
-      event.dock.classList.add("show");
+      dock.classList.add("show");
     });
 
     dock.addEventListener(
       "mouseleave",
       function (event) {
-        event.setInterval(dock.classList.remove("show"));
+        setInterval(dock.classList.remove("show"));
       },
       3000
     );
     let icons = document.querySelectorAll(".ico");
+    let length = icons.length;
+
     icons.forEach((item, index) => {
       item.addEventListener("mouseover", (e) => {
         focus(e.target, index);
       });
       item.addEventListener("mouseleave", (e) => {
-        e.icons.forEach((item) => {
+        icons.forEach((item) => {
           item.style.transform = "scale(1)  translateY(0px)";
         });
       });
