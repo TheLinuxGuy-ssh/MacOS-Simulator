@@ -1,4 +1,3 @@
-import "../css/topbar.css";
 import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
 import Drop from "../components/Drop";
 

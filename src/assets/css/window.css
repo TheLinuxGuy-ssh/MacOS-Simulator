@@ -5,6 +5,8 @@
     border-radius: 0.75rem;
     border: 1px solid #797979;
     box-shadow: 0px 0px 50px 0px #00000034;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .window-topbar {
     top: 0;

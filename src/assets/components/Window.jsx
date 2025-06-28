@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import $ from "jquery";
+
 const Window = (UID, type, content, minw, minh, maxw, maxh) => {
   useEffect(() => {
     $( function() {

@@ -1,6 +1,6 @@
 import "../css/window.css";
 import Window from "../components/Window";
-import Finder from "./Finder";
+import Finder from "./Finder/Finder";
 
 let Apps = [Finder]
 

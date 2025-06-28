@@ -1,3 +1,10 @@
+@import "./assets/css/animate.css";
+@import "./assets/css/desktop.css";
+@import "./assets/css/dock.css";
+@import "./assets/css/splash.css";
+@import "./assets/css/topbar.css";
+@import "./assets/css/window.css";
+
 * {
   margin: 0;
   padding: 0;

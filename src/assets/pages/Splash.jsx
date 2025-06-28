@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "../css/splash.css";
 
 const Splash = () => {
   useEffect(() => {
@@ -30,7 +29,6 @@ const Splash = () => {
         className="apple-logo"
         src="./src/assets/apple.png"
         width="50px"
-        alt=""
       />
       <div className="progressback">
         <div className="progressloader">
