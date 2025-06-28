@@ -2,7 +2,7 @@
 
 const Finder = () => {
     return (
-        <div className="Finder">
+        <div className="Finder" UID="1">
 
         </div>
     )

@@ -1,7 +1,11 @@
-import * as App from "./AppCompiler";
+import AppCompiler from "../apps/AppCompiler";
 
 const Workspace = () => {
-  return <div className="workspace"></div>;
+  return (
+  <div className="workspace">
+    <AppCompiler></AppCompiler>
+  </div>
+  )
 };
 
 export default Workspace;
