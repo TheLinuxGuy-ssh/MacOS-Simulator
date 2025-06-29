@@ -18,7 +18,6 @@ const Dock = () => {
       3000
     );
     let icons = document.querySelectorAll(".ico");
-    let length = icons.length;
 
     icons.forEach((item, index) => {
       item.addEventListener("mouseover", (e) => {

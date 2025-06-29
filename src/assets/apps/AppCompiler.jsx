@@ -7,7 +7,7 @@ let Apps = [Finder]
 const AppCompiler = () => {
     return (
         Apps.map((item) => (
-            <Window id={item}>
+            <Window key={item} UID={item}>
                 <item></item>
             </Window>
         ))

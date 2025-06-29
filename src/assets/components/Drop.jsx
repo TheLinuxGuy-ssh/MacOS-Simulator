@@ -1,7 +1,21 @@
 import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
 
+
+const DropItem = ({ children, shortcut }) => {
+  return (
+      <DropdownMenu.Item shortcut={shortcut}>{children}</DropdownMenu.Item>
+  );
+};
+
+const DropSeparator = () => {
+  return (
+  <DropdownMenu.Separator />
+);
+}
+
 const Drop = ({ title, children, color, size, variant }) => {
   return (
+    
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
         <Button
@@ -17,4 +31,8 @@ const Drop = ({ title, children, color, size, variant }) => {
   );
 };
 
-export default Drop;
+export {
+  DropItem,
+  DropSeparator,
+  Drop
+}
