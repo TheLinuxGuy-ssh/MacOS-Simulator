@@ -1,8 +1,9 @@
 import "../css/window.css";
 import Window from "../components/Window";
 import Finder from "./Finder/Finder";
+import Terminal from "./Terminal/Terminal"
 
-let Apps = [Finder]
+let Apps = [Finder, Terminal]
 
 const AppCompiler = () => {
     return (
