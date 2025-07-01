@@ -17,6 +17,10 @@
         {
             "Name": "Weather",
             "UID": 1000
+        },
+        {
+            "Name": "Files",
+            "UID": 2000
         }
     ]
 }
