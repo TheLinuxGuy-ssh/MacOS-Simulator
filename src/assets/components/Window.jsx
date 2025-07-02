@@ -1,6 +1,4 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import $ from "jquery";
-
 export const throttle = (f) => {
   let token = null,
     lastArgs = null;
@@ -87,8 +85,7 @@ const Window = (UID, type, content, minw, minh, maxw, maxh) => {
   });
     const [isActive, setIsActive] = useState(false);
 
-  const handleClick = event => {
-    // 👇️ Toggle isActive state on click
+  const handleClick = () => {
     setIsActive(current => !current);
   };
   return (
