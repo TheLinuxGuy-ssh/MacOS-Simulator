@@ -8,11 +8,11 @@ import Workspace from "./assets/pages/Workspace";
 const App = () => {
   return (
     <>
-    <Splash />
-    <Topbar />
-    <Wallpaper />
-    <Desktop />
-    <Workspace /> 
+      <Splash />
+      <Topbar />
+      <Wallpaper />
+      <Desktop />
+      <Workspace /> 
     </>
   )
 }

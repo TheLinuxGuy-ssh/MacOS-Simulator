@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Dock from "./Dock";
-import config from "../data/config";
 import "../css/window.css";
+import config from "../data/config";
+import Dock from "./Dock";
 import Window from "../components/Window";
 import Finder from "../apps/Finder/Finder";
 import Terminal from "../apps/Terminal/Terminal";

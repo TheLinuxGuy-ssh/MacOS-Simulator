@@ -19,7 +19,6 @@ const AppCompiler = () => {
     setZIndexes(prev => ({ ...prev, [uid]: maxZ + 1 }));
   };
 
-  // ✅ MISSING: these two handlers
   const handleMinimize = (uid) =>
     setWindowStates(ws => ({
       ...ws,

@@ -15,8 +15,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 30px;
-    background-color: rgb(31, 31, 31);
+    height: 40px;
+    background-color: rgba(31, 31, 31, 0.315);
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
     display: flex;
@@ -29,15 +29,15 @@
 }
 
 .window-btn {
-    width: 12.5px;
-    height: 12.5px;
+    width: 15.5px;
+    height: 15.5px;
     border-radius: 50%;
     margin: 0 0.2rem;
 }
 
 .window-btn.close {
     margin-left: 0.75rem;
-    background-color: red;
+    background-color: #FF605C;
 }
 
 .window-btn.maximise {
@@ -45,7 +45,7 @@
 }
 
 .window-btn.minimise {
-    background-color: green;
+    background-color: #00CA4E;
 }
 
 .focused {
