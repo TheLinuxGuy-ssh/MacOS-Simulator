@@ -1,6 +1,6 @@
 {
-    "wallpaperlight": "src/assets/backgroundlight.png",
-    "wallpaperdark": "src/assets/backgrounddark.png",
+    "wallpaperlight": "/backgroundlight.png",
+    "wallpaperdark": "/backgrounddark.png",
     "app": [ 
         {
     "uid": 1,
