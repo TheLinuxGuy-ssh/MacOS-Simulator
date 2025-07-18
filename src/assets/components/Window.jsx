@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useCallback } from "react";
+import React, { useRef, useState, useEffect, useCallback, useReducer } from "react";
 export const throttle = (f) => {
   let token = null,
     lastArgs = null;
@@ -15,6 +15,8 @@ export const throttle = (f) => {
   result.cancel = () => token && cancelAnimationFrame(token);
   return result;
 };
+
+
 
 const id = (x) => x;
 const useDraggable = ({ onDrag = id } = {}) => {
@@ -88,9 +90,10 @@ const Window = (UID, type, content, minw, minh, maxw, maxh) => {
   const handleClick = () => {
     setIsActive(current => !current);
   };
+
   return (
-    <div id={UID} ref={ref} onClick={handleClick}  className={"window " + (isActive ? "focused" : "")}>
-      <div className={"window-topbar " + `{type == "widget" ? "hidden" : ""}`}>
+    <div id={UID} ref={ref} onClick={handleClick}  className={`window ${isActive ? `focused` : ``}`}>
+      <div className={"window-topbar " + `{type == "widget" ? "hidden" : ""}`} >
         <div className="window-btn close"></div>
         <div className="window-btn maximise"></div>
         <div className="window-btn minimise"></div>
