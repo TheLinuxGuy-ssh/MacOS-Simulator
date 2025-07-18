@@ -23,7 +23,7 @@ body {
 
 body.light {
   /* // Primary */
-  background: url(./assets/backgroundlight.png) no-repeat;
+  background: url(/backgroundlight.png) no-repeat;
   background-size: 100%;
   --app-color-primary: hsl(211, 100%, 50%);
   --app-color-primary-hsl: 211, 100%, 50%;
@@ -98,7 +98,7 @@ body.light {
 body,
 body[data-theme='dark'] {
   /* // Primary */
-  background: url(./assets/backgrounddark.png) no-repeat;
+  background: url(/backgrounddark.png) no-repeat;
   background-size: cover;
   --app-color-primary: hsl(211, 100%, 50%);
   --app-color-primary-hsl: 211, 100%, 50%;

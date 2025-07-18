@@ -11,7 +11,7 @@
     {
     "uid": 2,
     "Name": "Terminal",
-    "Icon": "src/assets/data/terminal.png"
+    "Icon": "./terminal.png"
     }
     ],
     "widget": [
