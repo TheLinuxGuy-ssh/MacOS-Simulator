@@ -1,7 +1,28 @@
+import { ReactTerminal } from "react-terminal";
+import "./style.css";
+
 const Terminal = () => {
+    const commands = {
+    whoami: "root",
+    cd: (directory) => `changed path to ${directory}`,
+    ls: "bin\tboot\tdev\tetc\thome\tlib\tlib64\tmedia\tmnt\topt\tproc\troot\tproc\troot\trun\tsbin\tsrv\tsys\ttmp\tusr\tvar"
+  };
   return (
     <div className="Terminal">
-      this is your terminal, beep beep boop boop, please view the other app if you havent yet...
+          <ReactTerminal
+      prompt="root@macos:~# "
+      commands={commands}
+      showControlBar={false}
+      errorMessage={`bash: command not found`}
+      themes={{
+        "terminal": {
+        themeBGColor: "#000",
+        themeColor: "#FFFEFC",
+        themePromptColor: "#FFFEFC"
+        }
+      }}
+      theme="terminal"
+    />
     </div>
   )
 };

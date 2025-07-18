@@ -1,5 +1,5 @@
 .window {
-    width: 500px;
+    width: 600px;
     height: 400px;
     background-color: rgba(52, 52, 52, 0.267);
     border-radius: 0.75rem;
@@ -8,6 +8,7 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     position: absolute;
+
     color: #fff;
 }
 .window-topbar {
@@ -20,6 +21,11 @@
     border-top-right-radius: 0.75rem;
     display: flex;
     align-items: center;
+}
+
+.window-content {
+    height: 100%;
+    width: 100%;
 }
 
 .window-btn {

@@ -40,6 +40,8 @@
     background-color: #5f5f5f46;
     color: #fff !important;
     padding: 0 !important;
+        backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .rt-BaseMenuViewport {
