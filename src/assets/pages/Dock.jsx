@@ -1,76 +1,51 @@
-import { useEffect } from "react";
-import apps from "../data/config.json"
 import "../css/dock.css";
+import appsConfig from "../data/config.json";
+import { useState } from "react";
 
-const Dock = () => {
-  useEffect(() => {
-    let dockpuller = document.querySelector(".dockpuller");
-    let dock = document.querySelector(".dock");
-    dockpuller.addEventListener("mouseenter", function (event) {
-      dock.classList.add("show");
-    });
+const Dock = ({ windowStates, onOpen }) => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    dock.addEventListener(
-      "mouseleave",
-      function (event) {
-        setInterval(dock.classList.remove("show"));
-      },
-      3000
-    );
-    let icons = document.querySelectorAll(".ico");
+  const handleIconClick = (uid) => {
+    onOpen(uid);
+  };
 
-    icons.forEach((item, index) => {
-      item.addEventListener("mouseover", (e) => {
-        focus(e.target, index);
-      });
-      item.addEventListener("mouseleave", (e) => {
-        icons.forEach((item) => {
-          item.style.transform = "scale(1)  translateY(0px)";
-        });
-      });
-    });
+  const handleMouseOver = (index) => {
+    setHoveredIndex(index);
+  };
 
-    const focus = (elem, index) => {
-      let previous = index - 1;
-      let previous1 = index - 2;
-      let next = index + 1;
-      let next2 = index + 2;
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
 
-      if (previous == -1) {
-        elem.style.transform = "scale(1.5)  translateY(-10px)";
-      } else if (next == icons.length) {
-        elem.style.transform = "scale(1.5)  translateY(-10px)";
-      } else {
-        elem.style.transform = "scale(1.5)  translateY(-10px)";
-        icons[previous].style.transform = "scale(1.2) translateY(-6px)";
-        icons[previous1].style.transform = "scale(1.1)";
-        icons[next].style.transform = "scale(1.2) translateY(-6px)";
-        icons[next2].style.transform = "scale(1.1)";
-      }
-    };
-  });
+  const scaleForIndex = (index) => {
+    if (hoveredIndex === null) return "scale(1) translateY(0)";
+    if (index === hoveredIndex) return "scale(1.5) translateY(-10px)";
+    if (Math.abs(index - hoveredIndex) === 1) return "scale(1.2) translateY(-6px)";
+    if (Math.abs(index - hoveredIndex) === 2) return "scale(1.1)";
+    return "scale(1)";
+  };
 
   return (
-    <>
-      <div className="dockpuller">
-        <div className="dock">
-            <div className="dock-container">
-                {
-    apps.app.map((item) => (
-      <li key={item.UID} className="dock-li">
+    <div className="dockpuller">
+      <div className="dock">
+        <ul className="dock-container">
+          {appsConfig.app.map((item, index) => (
+            <li key={item.uid} className="dock-li">
               <div className="name">{item.Name}</div>
               <img
                 className="ico"
                 src={item.Icon}
-                alt=""
+                alt={item.Name}
+                style={{ transform: scaleForIndex(index), transition: "transform 0.15s" }}
+                onClick={() => handleIconClick(item.uid)}
+                onMouseEnter={() => handleMouseOver(index)}
+                onMouseLeave={handleMouseLeave}
               />
             </li>
-    ))
-  }          
-        </div>
-        </div>
+          ))}
+        </ul>
       </div>
-    </>
+    </div>
   );
 };
 

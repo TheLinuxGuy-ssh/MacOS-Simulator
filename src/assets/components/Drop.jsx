@@ -22,11 +22,12 @@ const Drop = ({ title, children, color, size, variant }) => {
           variant={variant == null ? "surface" : variant}
           color={color == null ? "gray" : color}
           size={size == null ? "1" : size}
+          className="topbar-btn"
         >
           {title}
         </Button>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content>{children}</DropdownMenu.Content>
+      <DropdownMenu.Content className="topbar-dropdown">{children}</DropdownMenu.Content>
     </DropdownMenu.Root>
   );
 };

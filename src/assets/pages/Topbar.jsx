@@ -5,7 +5,7 @@ const Topbar = () => {
   return (
     <>
       <div className="topbar">
-        <Drop title="File">
+        <Drop title="File" className="topbar-btn">
           <DropItem shortcut="⌘ E">Edit</DropItem>
           <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
           <DropSeparator />

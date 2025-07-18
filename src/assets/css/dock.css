@@ -8,7 +8,7 @@
   transition-delay: 2s;
   justify-content: center;
   position: absolute;
-  bottom: -60px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -116,10 +116,10 @@
     bottom: 0;
     left: 0;
 }
-.dock.show {
+/* .dock.show {
     margin-bottom: 75px;
     transition: 0.5s ease-in;
-}
+} */
 .dock:hover {
  margin-bottom: 75px;
 }
