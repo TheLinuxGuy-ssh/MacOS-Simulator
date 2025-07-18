@@ -27,7 +27,7 @@ const Splash = () => {
       <div className="loaderback"></div>
       <img
         className="apple-logo"
-        src="../apple.png"
+        src="./src/assets/apple.png"
         width="50px"
       />
       <div className="progressback">

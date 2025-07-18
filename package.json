@@ -14,7 +14,8 @@
     "jquery": "^3.7.1",
     "jquery-ui": "^1.14.1",
     "react-dom": "^19.1.0",
-    "react-easy-sort": "^1.6.0"
+    "react-easy-sort": "^1.6.0",
+    "vite-jsconfig-paths": "^2.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
