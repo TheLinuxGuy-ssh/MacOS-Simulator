@@ -1,31 +1,28 @@
 .window {
     width: 600px;
     height: 400px;
-    background-color: rgba(52, 52, 52, 0.267);
-    border-radius: 0.75rem;
-    border: 1px solid #797979;
-    box-shadow: 0px 0px 50px 0px #00000034;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1.85rem;
     position: absolute;
-
+    transition: none !important;
     color: #fff;
 }
 .window-topbar {
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px;
-    background-color: rgba(31, 31, 31, 0.315);
+    height: 2.8rem;
+
     border-top-left-radius: 0.75rem;
     border-top-right-radius: 0.75rem;
     display: flex;
+    z-index: 1 !important;
     align-items: center;
 }
 
 .window-content {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .window-btn {
@@ -36,7 +33,7 @@
 }
 
 .window-btn.close {
-    margin-left: 0.75rem;
+    margin-left: 1rem;
     background-color: #FF605C;
 }
 

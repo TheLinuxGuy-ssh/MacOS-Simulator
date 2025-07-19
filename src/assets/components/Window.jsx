@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
+import LiquidGlass from "./LiquidGlass";
 
 const throttle = (f) => {
   let token = null, lastArgs = null;
@@ -106,9 +107,10 @@ const Window = ({
         maxWidth: maxw,
         maxHeight: maxh
       }}
-      className={`window ${type === "widget" ? "widget" : ""}`}
+      className={`window liquidGlass-wrapper ${type === "widget" ? "widget" : ""}`}
       onMouseDown={() => bringToFront && bringToFront(uid)}
     >
+      <LiquidGlass />
       <div
         ref={topbarRef}
         className="window-topbar"

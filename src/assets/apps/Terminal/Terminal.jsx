@@ -16,7 +16,6 @@ const Terminal = () => {
       errorMessage={`bash: command not found`}
       themes={{
         "terminal": {
-        themeBGColor: "#00000090",
         themeColor: "#FFFEFC",
         themePromptColor: "#FFFEFC"
         }

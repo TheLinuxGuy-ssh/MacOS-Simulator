@@ -1,6 +1,5 @@
 .dock {
   width: auto;
-  height: 60px;
   border-radius: 16px;
   display: flex;
   transition: 0.5s cubic-bezier(0.66, 0, 0.34, 1);
@@ -9,7 +8,11 @@
   position: absolute;
   bottom: 35px;
   left: 50%;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
   transform: translateX(-50%);
+  border-radius: 1.8rem;
 }
 .dock .dock-container {
   padding: 0.5rem;
@@ -19,21 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    to top,
-    rgba(30, 30, 40, 0.87) 60%,
-    rgba(120, 120, 150, 0.21) 100%
-  );
-  border-radius: 32px;
-  padding: 12px 0;
-  box-shadow:
-    0 4px 32px 0 rgba(0,0,0,0.27), 
-    0 -2px 16px 0 rgba(40,54,78,0.19),
-    0 0px 10px 0 rgba(255,255,255,0.13);
-  border: 1.5px solid rgba(180,180,230,0.18);
-  backdrop-filter: blur(18px) saturate(160%);
-  -webkit-backdrop-filter: blur(18px) saturate(160%);
-  transition: box-shadow 0.2s;
+
 }
 .dock .dock-container .li-bin {
   margin-left: 20px;
@@ -136,6 +125,3 @@
  margin-bottom: 75px;
 } */
 
-.glass-svg {
-  display: none;
-}
