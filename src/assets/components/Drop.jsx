@@ -1,5 +1,5 @@
 import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
-
+import LiquidGlass from "./LiquidGlass";
 
 const DropItem = ({ children, shortcut }) => {
   return (
@@ -27,7 +27,9 @@ const Drop = ({ title, children, color, size, variant, className }) => {
           {title}
         </Button>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content className="topbar-dropdown">{children}</DropdownMenu.Content>
+      <DropdownMenu.Content className={`topbar-dropdown topbar-dropdown-${className}`}>
+        <LiquidGlass />
+        {children}</DropdownMenu.Content>
     </DropdownMenu.Root>
   );
 };

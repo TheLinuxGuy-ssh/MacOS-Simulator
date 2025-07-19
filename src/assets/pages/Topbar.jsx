@@ -5,10 +5,16 @@ const Topbar = ({ focused }) => {
   return (
     <>
       <div className="topbar">
-        <Drop title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]}>
-          <DropItem shortcut="⌘ E">Edit</DropItem>
-          <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+        <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]}>
+          <DropItem>About This Mac</DropItem>
           <DropSeparator />
+          <DropItem>System Preferences...</DropItem>
+          <DropItem>Location</DropItem>
+          <DropItem>App Store...</DropItem>
+          <DropSeparator />
+          <DropItem>Sleep</DropItem>
+          <DropItem>Restart</DropItem>
+          <DropItem>Shutdown</DropItem>
         </Drop>
         <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
           <DropItem shortcut="⌘ E">Edit</DropItem>
