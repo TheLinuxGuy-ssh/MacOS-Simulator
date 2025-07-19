@@ -6,7 +6,7 @@
   transition-delay: 2s;
   justify-content: center;
   position: absolute;
-  bottom: 35px;
+  bottom: 15px;
   left: 50%;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
 
@@ -15,7 +15,7 @@
   border-radius: 1.8rem;
 }
 .dock .dock-container {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   width: auto;
   height: 100%;
 
