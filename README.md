@@ -18,6 +18,12 @@ you might not find much to do here since the project has been a lot more focused
 - Topbar Simulation (no interaction) with status changing with the current app focused
 - All window interaction
 
+## How to run and Develop:
+
+- First install all nodejs dependencies with `npm install`
+- proceed to launch the local server with `npm run dev`
+- Voila you are up!!
+
 <div align="center">
   <a href="https://shipwrecked.hackclub.com/?t=ghrm" target="_blank">
     <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/739361f1d440b17fc9e2f74e49fc185d86cbec14_badge.png" 
