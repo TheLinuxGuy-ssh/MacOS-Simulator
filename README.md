@@ -1,6 +1,6 @@
 # MacOS Simulator
 
-An online experience of macOS at the cost of nothing but Internet packets
+An online experience of macOS at the cost of nothing but Internet packets (preferred mostly for 1920x1080 resolutions)
 
 <img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/c1f746a1-366c-4661-8a37-0adf49c33bdc" />
 
