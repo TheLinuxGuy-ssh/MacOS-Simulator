@@ -45,8 +45,11 @@
     width: 15.5px;
     height: 15.5px;
     border-radius: 50%;
-    margin: 0 0.2rem;
+    margin: 0 0.3rem;
     transition: 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .window-btn.close {
@@ -67,4 +70,9 @@
 
 .hidden {
     display: none;
+}
+
+.window-btn-maximise {
+    width: 70%;
+    height: 70%;
 }

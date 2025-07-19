@@ -13,7 +13,7 @@ const DropSeparator = () => {
 );
 }
 
-const Drop = ({ title, children, color, size, variant }) => {
+const Drop = ({ title, children, color, size, variant, className }) => {
   return (
     
     <DropdownMenu.Root>
@@ -22,7 +22,7 @@ const Drop = ({ title, children, color, size, variant }) => {
           variant={variant == null ? "surface" : variant}
           color={color == null ? "gray" : color}
           size={size == null ? "1" : size}
-          className="topbar-btn"
+          className={`topbar-btn ${className}`}
         >
           {title}
         </Button>

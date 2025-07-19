@@ -1,11 +1,41 @@
 import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
 import { DropItem, DropSeparator, Drop } from "../components/Drop";
 
-const Topbar = () => {
+const Topbar = ({ focused }) => {
   return (
     <>
       <div className="topbar">
+        <Drop title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]}>
+          <DropItem shortcut="⌘ E">Edit</DropItem>
+          <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+          <DropSeparator />
+        </Drop>
+        <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
+          <DropItem shortcut="⌘ E">Edit</DropItem>
+          <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+          <DropSeparator />
+        </Drop>
         <Drop title={"File"} className="topbar-btn">
+          <DropItem shortcut="⌘ E">Edit</DropItem>
+          <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+          <DropSeparator />
+        </Drop>
+        <Drop title={"Edit"} className="topbar-btn">
+          <DropItem shortcut="⌘ E">Edit</DropItem>
+          <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+          <DropSeparator />
+        </Drop>
+        <Drop title={"View"} className="topbar-btn">
+          <DropItem shortcut="⌘ E">View</DropItem>
+          <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+          <DropSeparator />
+        </Drop>
+        <Drop title={"Window"} className="topbar-btn">
+          <DropItem shortcut="⌘ E">Window</DropItem>
+          <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
+          <DropSeparator />
+        </Drop>
+        <Drop title={"Help"} className="topbar-btn">
           <DropItem shortcut="⌘ E">Edit</DropItem>
           <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
           <DropSeparator />

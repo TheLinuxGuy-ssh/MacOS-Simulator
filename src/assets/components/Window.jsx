@@ -128,16 +128,30 @@ const Window = ({
             e.stopPropagation();
             onClose?.();
           }}
-        ></div>
-        <div className="window-btn maximise"></div>
-        <div
-          className="window-btn minimise window-btn-control"
-          onMouseDown={(e) => e.stopPropagation()}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9">
+  <line x1="2" y1="2" x2="7" y2="7" stroke="#3E3E3E" stroke-width="1.3" stroke-linecap="round"/>
+  <line x1="7" y1="2" x2="2" y2="7" stroke="#3E3E3E" stroke-width="1.3" stroke-linecap="round"/>
+</svg>
+
+        </div>
+        <div className="window-btn maximise"
+        onMouseDown={(e) => e.stopPropagation()}
           onClick={(e) => {
             e.stopPropagation();
             onMinimize?.();
           }}
-        ></div>
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9">
+  <line x1="2.3" y1="4.5" x2="6.7" y2="4.5" stroke="#3E3E3E" stroke-width="1.3" stroke-linecap="round"/>
+</svg>
+
+        </div>
+        <div
+          className="window-btn minimise window-btn-control"
+        >
+          <img src="./close.svg" className="window-btn-maximise" alt="" />
+        </div>
         </div>
       </div>
       <div className="window-content">{children}</div>
