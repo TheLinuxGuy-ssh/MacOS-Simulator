@@ -2,6 +2,9 @@
 
 An online experience of macOS at the cost of nothing but Internet packets
 
+
+<img width="1919" height="1079" alt="Screenshot 2025-07-16 120608" src="https://github.com/user-attachments/assets/6c752a93-32d7-4c62-b901-9f2927ac5290" />
+
 ## Features Added: 
 
 - Window Draggable
