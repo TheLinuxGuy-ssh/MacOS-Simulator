@@ -51,6 +51,14 @@
     justify-content: center;
     align-items: center;
 }
+.window-btn * {
+    opacity: 0;
+    transition: 0.2s all;
+}
+
+.window-topbar-buttons:hover .window-btn * {
+    opacity: 1;
+}
 
 .window-btn.close {
     background-color: #FF605C;
@@ -75,4 +83,18 @@
 .window-btn-maximise {
     width: 70%;
     height: 70%;
+}
+
+.window {
+    transition: 0.8s top !important;
+    top: 0;
+    
+}
+
+.app-minimising {
+    top: 100%;
+}
+
+.app-hidden {
+    top: 100%;
 }

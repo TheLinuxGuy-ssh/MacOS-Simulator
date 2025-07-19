@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "../css/window.css";
 import config from "../data/config";
 import Topbar from "./Topbar";
@@ -11,10 +11,11 @@ import LiquidGlass from "../components/LiquidGlass";
 const componentMap = Apps;
 
 const Workspace = () => {
-  
+  const workspaceRef = useRef(null);
   const [windowStates, setWindowStates] = useState(
     Object.fromEntries(config.app.map(app => [app.uid, { open: false, minimized: false }]))
   );
+    const [isMinimizing, setIsMinimizing] = useState(false);
   const [focusedUid, setFocusUid] = useState(null);
   const apps = config.app;
 
@@ -27,11 +28,16 @@ const Workspace = () => {
     setZIndexes((prev) => ({ ...prev, [uid]: maxZ + 1 }));
   };
   const focusedApp = apps.find(app => app.uid === focusedUid);
-  const handleMinimize = (uid) => setWindowStates(ws => ({
+const handleMinimize = (uid) => {
+  setIsMinimizing(true);
+  setTimeout(() => {
+    setIsMinimizing(false);
+      setWindowStates(ws => ({
     ...ws,
     [uid]: { ...ws[uid], minimized: true }
   }));
-
+  }, 700);
+};
   const handleRestore = (uid) => [setFocusUid(uid), setWindowStates(ws => ({
     ...ws,
     [uid]: { ...ws[uid], open: true, minimized: false }
@@ -58,7 +64,7 @@ const Workspace = () => {
   bringToFront={bringToFront}
   appMeta={app}
   type="app"
-  className={windowStates[app.uid]?.minimized ? "hidden" : ""}
+  className={`${windowStates[app.uid]?.minimized ? "app-hidden " : " "} ${isMinimizing ? "app-minimising" : ""}`}
   onClose={() => handleClose(app.uid)}
   onMinimize={() => handleMinimize(app.uid)}
 >

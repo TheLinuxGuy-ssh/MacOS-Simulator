@@ -85,7 +85,8 @@ const Window = ({
   appMeta,
   onClose,
   onMinimize,
-  className
+  className,
+  
 }) => {
   const handleDrag = useCallback(
     ({ x, y }) => ({
