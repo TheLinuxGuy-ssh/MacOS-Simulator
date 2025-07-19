@@ -4,7 +4,9 @@ import config from "../data/config";
 import Topbar from "./Topbar";
 import Dock from "./Dock";
 import Window from "../components/Window";
+import Launcher from "../apps/Launcher";
 import * as Apps from "../apps";
+import LiquidGlass from "../components/LiquidGlass";
 
 const componentMap = Apps;
 
@@ -39,7 +41,8 @@ const Workspace = () => {
   const handleClose = (uid) => setWindowStates(ws => ({
     ...ws,
     [uid]: { ...ws[uid], open: false, minimized: false }
-  }));
+  }), setFocusUid(null));
+
   return (
     <>
     <Topbar focused={focusedApp} />
@@ -47,7 +50,7 @@ const Workspace = () => {
     {apps.map(app => {
         const AppComponent = componentMap[app.Name] || (() => <div>Unknown App: {app.Name}</div>);
         return (
-            windowStates[app.uid]?.open && !windowStates[app.uid]?.minimized ? (
+            windowStates[app.uid]?.open ? (
               <Window
   key={app.uid}
   uid={app.uid}
@@ -55,6 +58,7 @@ const Workspace = () => {
   bringToFront={bringToFront}
   appMeta={app}
   type="app"
+  className={windowStates[app.uid]?.minimized ? "hidden" : ""}
   onClose={() => handleClose(app.uid)}
   onMinimize={() => handleMinimize(app.uid)}
 >
@@ -66,7 +70,8 @@ const Workspace = () => {
       })}
   </div>
   <Dock windowStates={windowStates}
-  onOpen={handleRestore} />
+  onOpen={handleRestore} bringToFront={bringToFront} />
+  <Launcher />
   </>
   )
 };

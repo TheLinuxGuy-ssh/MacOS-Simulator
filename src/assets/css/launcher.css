@@ -1,0 +1,27 @@
+.launcher {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: none;
+}
+
+.launcher .liquidGlass {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.launcher .liquidGlass-tint {
+    backdrop-filter: blur(15px);
+}
+
+.launcher-content {
+    display: block;
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    padding: 5%;
+}
+

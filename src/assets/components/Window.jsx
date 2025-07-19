@@ -84,7 +84,8 @@ const Window = ({
   bringToFront,
   appMeta,
   onClose,
-  onMinimize
+  onMinimize,
+  className
 }) => {
   const handleDrag = useCallback(
     ({ x, y }) => ({
@@ -107,7 +108,7 @@ const Window = ({
         maxWidth: maxw,
         maxHeight: maxh
       }}
-      className={`window liquidGlass-wrapper ${type === "widget" ? "widget" : ""}`}
+      className={`window liquidGlass-wrapper ${type === "widget" ? "widget" : ""} ${className}`}
       onMouseDown={() => bringToFront && bringToFront(uid)}
     >
       <LiquidGlass />

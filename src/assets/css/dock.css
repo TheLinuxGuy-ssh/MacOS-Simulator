@@ -38,14 +38,14 @@
   background: rgba(255, 255, 255, 0.5);
   bottom: 2px;
 }
-.dock .dock-container .dockitemactive::after {
+.dock .dock-container .active::after {
   content: "";
   position: absolute;
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5);
-  bottom: 2px;
+  bottom: 0.5rem;
 }
 .dock .dock-container .dock-li {
   list-style: none;
