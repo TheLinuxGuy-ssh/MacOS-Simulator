@@ -85,8 +85,9 @@ const Window = ({
   appMeta,
   onClose,
   onMinimize,
+  onMaximize,
   className,
-  
+
 }) => {
   const handleDrag = useCallback(
     ({ x, y }) => ({
@@ -151,6 +152,11 @@ const Window = ({
         </div>
         <div
           className="window-btn minimise window-btn-control"
+          onMouseDown={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            onMaximize?.();
+          }}
         >
           <img src="./close.svg" className="window-btn-maximise" alt="" />
         </div>
