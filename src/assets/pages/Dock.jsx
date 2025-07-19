@@ -1,7 +1,7 @@
 import "../css/dock.css";
 import { useState } from "react";
-import appsConfig from "../data/config.json";
 import LiquidGlass from "../components/LiquidGlass";
+import appsConfig from "../data/config.json";
 
 const Dock = ({ windowStates, onOpen }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -34,7 +34,10 @@ const Dock = ({ windowStates, onOpen }) => {
         <ul className="dock-container">
           {appsConfig.app.map((item, index) => (
             <li key={item.uid} className="dock-li">
-              <div className="name">{item.Name}</div>
+              <div className="name">
+                <LiquidGlass />  
+                {item.Name}
+              </div>
               <img
                 className="ico"
                 src={item.Icon}

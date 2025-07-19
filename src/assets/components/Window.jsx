@@ -115,6 +115,8 @@ const Window = ({
         ref={topbarRef}
         className="window-topbar"
       >
+        <div className="window-topbar-buttons">
+          <LiquidGlass />
         {appMeta?.Icon && (
           <img src={appMeta.Icon} alt={appMeta.Name} className="window-icon hidden" />
         )}
@@ -127,6 +129,7 @@ const Window = ({
             onClose?.();
           }}
         ></div>
+        <div className="window-btn maximise"></div>
         <div
           className="window-btn minimise window-btn-control"
           onMouseDown={(e) => e.stopPropagation()}
@@ -135,6 +138,7 @@ const Window = ({
             onMinimize?.();
           }}
         ></div>
+        </div>
       </div>
       <div className="window-content">{children}</div>
     </div>

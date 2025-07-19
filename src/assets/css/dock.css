@@ -56,7 +56,7 @@
   height: 50px;
   vertical-align: bottom;
   transition: 0.2s;
-  margin: 0 14px;
+  margin: 0 10px;
   transform-origin: 50% 100%;
 }
 .dock .dock-container .dock-li:nth-child(0) {
@@ -68,14 +68,13 @@
 .dock .dock-container .dock-li .name {
   position: absolute;
   top: -70px;
-  background: rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 0.9);
   height: 10px;
   padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 1.8rem;
   visibility: hidden;
 }
 .dock .dock-container .dock-li .name::after {
