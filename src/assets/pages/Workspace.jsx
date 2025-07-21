@@ -13,9 +13,8 @@ const componentMap = Apps;
 const Workspace = () => {
   const workspaceRef = useRef(null);
   const [windowStates, setWindowStates] = useState(
-    Object.fromEntries(config.app.map(app => [app.uid, { open: false, minimized: false, maximized: false }]))
+    Object.fromEntries(config.app.map(app => [app.uid, { open: false, minimized: false, isminimizing: false, maximized: false }]))
   );
-    const [isMinimizing, setIsMinimizing] = useState(false);
   const [focusedUid, setFocusUid] = useState(null);
   const apps = config.app;
 
@@ -29,12 +28,14 @@ const Workspace = () => {
   };
   const focusedApp = apps.find(app => app.uid === focusedUid);
 const handleMinimize = (uid) => {
-  setIsMinimizing(true);
+  setWindowStates(ws => ({
+    ...ws,
+    [uid]: { ...ws[uid], isminimizing: true }
+  }));
   setTimeout(() => {
-    setIsMinimizing(false);
       setWindowStates(ws => ({
     ...ws,
-    [uid]: { ...ws[uid], minimized: true }
+    [uid]: { ...ws[uid], minimized: true, isminimizing: false }
   }));
   }, 1700);
 };
@@ -77,7 +78,7 @@ const handleMaximize = (uid) => {
   bringToFront={bringToFront}
   appMeta={app}
   type="app"
-  className={`${windowStates[app.uid]?.minimized ? "app-hidden " : " "} ${isMinimizing ? "app-minimising" : ""} ${windowStates[app.uid]?.maximized ? "app-maximized" : ""}`}
+  className={`${windowStates[app.uid]?.minimized ? "app-hidden " : " "} ${windowStates[app.uid]?.isminimizing ? "app-minimising" : ""} ${windowStates[app.uid]?.maximized ? "app-maximized" : ""}`}
   onClose={() => handleClose(app.uid)}
   onMinimize={() => handleMinimize(app.uid)}
   onMaximize={() => handleMaximize(app.uid)}
