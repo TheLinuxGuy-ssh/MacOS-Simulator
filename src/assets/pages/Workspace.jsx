@@ -37,7 +37,7 @@ const handleMinimize = (uid) => {
     ...ws,
     [uid]: { ...ws[uid], minimized: true, isminimizing: false }
   }));
-  }, 1700);
+  }, 500);
 };
 const handleMaximize = (uid) => {
   if (windowStates[uid].maximized) {
@@ -91,7 +91,7 @@ const handleMaximize = (uid) => {
       })}
   </div>
   <Dock windowStates={windowStates}
-  onOpen={handleRestore} bringToFront={bringToFront} />
+  onOpen={handleRestore} bringToFront={bringToFront}   />
   <Launcher />
   </>
   )

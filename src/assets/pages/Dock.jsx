@@ -3,9 +3,8 @@ import { useState } from "react";
 import LiquidGlass from "../components/LiquidGlass";
 import appsConfig from "../data/config.json";
 
-const Dock = ({ windowStates, onOpen, bringToFront }) => {
+const Dock = ({ windowStates, onOpen }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-
   const handleIconClick = (uid) => {
     onOpen(uid);
     bringToFront(uid);

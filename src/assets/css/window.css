@@ -3,7 +3,7 @@
     height: 400px;
     border-radius: 1.85rem;
     position: absolute;
-    transition: 0.4s all;
+    transition: 0.3s all;
     color: #fff;
     overflow: hidden;
     padding: 0.2rem;
@@ -100,11 +100,16 @@
     top: 0 !important;
     left: 0 !important;
 }
+.app-maximized .liquidGlass-effect .app-maximized .liquidGlass-tint .app-maximized .liquidGlass-shine {
+    display: none !important;
+}
 
 .app-minimising {
-    top: 100% !important;
+    top: 80% !important;
+    transform: scale(0.2);
 }
 
 .app-hidden {
-    top: 100% !important;
+    top: 80% !important;
+    transform: scale(0.2);
 }
