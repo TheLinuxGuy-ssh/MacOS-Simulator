@@ -6,7 +6,7 @@ const Terminal = () => {
     whoami: "root",
     cd: (directory) => `changed path to ${directory}`,
     ls: "bin\tboot\tdev\tetc\thome\tlib\tlib64\tmedia\tmnt\topt\tproc\troot\tproc\troot\trun\tsbin\tsrv\tsys\ttmp\tusr\tvar",
-    help: "whomami\ncd\nls"
+    help: "whoammi\ncd\nls"
   };
   return (
     <div className="Terminal">
