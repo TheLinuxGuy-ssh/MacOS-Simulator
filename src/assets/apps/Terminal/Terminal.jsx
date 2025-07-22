@@ -11,7 +11,7 @@ const Terminal = () => {
   return (
     <div className="Terminal">
           <ReactTerminal
-      prompt="root@macos:~# "
+      prompt="root@macos:~#"
       commands={commands}
       showControlBar={false}
       errorMessage={`bash: command not found`}
