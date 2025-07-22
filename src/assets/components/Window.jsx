@@ -21,6 +21,7 @@ const useDraggable = ({ onDrag = id } = {}) => {
   const handleRef = useRef();
 
   useEffect(() => {
+    const windowElem = windowRef.current;
     const handleElem = handleRef.current;
     if (!handleElem) return;
 
@@ -32,6 +33,7 @@ const useDraggable = ({ onDrag = id } = {}) => {
       if (e.button !== 0) return;
       e.preventDefault();
       document.body.style.userSelect = "none";
+      windowElem.classList.add("pressed");
       setPressed(true);
     };
 
@@ -52,11 +54,14 @@ const useDraggable = ({ onDrag = id } = {}) => {
         x: pos.x + event.movementX,
         y: pos.y + event.movementY,
       });
-      elem.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
+      elem.style.left = `${pos.x}px`;
+      elem.style.top = `${pos.y}px`;
     });
 
     const handleMouseUp = () => {
       document.body.style.userSelect = "";
+      const ele = windowRef.current;
+      ele.classList.remove("pressed");
       setPressed(false);
     };
 
