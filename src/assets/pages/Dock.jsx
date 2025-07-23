@@ -32,12 +32,12 @@ const Dock = ({ windowStates, onOpen }) => {
       <div className="dock">
         <LiquidGlass />
         <ul className="dock-container">
-          <li key={0} className="dock-li">
+          {/* <li key={0} className="dock-li">
             <div className="name">
               <LiquidGlass />
               Launcher</div>
             <img src="./applauncher.png" className="ico" alt="" />
-          </li>
+          </li> */}
           {appsConfig.app.map((item, index) => (
             <li key={item.uid} className={`dock-li ${windowStates[item.uid].open ? `active` : ``}`}>
               <div className="name">

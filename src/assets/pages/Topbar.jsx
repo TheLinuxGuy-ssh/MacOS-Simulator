@@ -5,6 +5,7 @@ const Topbar = ({ focused }) => {
   return (
     <>
       <div className="topbar">
+        Topbar coming soon!
         <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]}>
           <DropItem>About This Mac</DropItem>
           <DropSeparator />
