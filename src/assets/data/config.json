@@ -2,8 +2,11 @@
     "wallpaperlight": "/backgroundlight.png",
     "wallpaperdark": "/backgrounddark.png",
     "app": [ 
-
-
+    {
+    "uid": 1,
+    "Name": "Finder",
+    "Icon": "./finder.png"
+    },
     {
     "uid": 2,
     "Name": "Terminal",
@@ -24,10 +27,5 @@
             "Name": "Files",
             "UID": 2000
         }
-    ],
-            "tmp": [{
-    "uid": 1,
-    "Name": "Finder",
-    "Icon": "./finder.png"
-}]
+    ]
 }
