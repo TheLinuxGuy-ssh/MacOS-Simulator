@@ -51,7 +51,11 @@ const handleMaximize = (uid) => {
   const handleRestore = (uid) => [setFocusUid(uid), setWindowStates(ws => ({
     ...ws,
     [uid]: { ...ws[uid], open: true, minimized: false }
-    
+  })), launcherState ? handleLauncher() : null];
+
+  const handleLaunchRestore = (uid) => [setFocusUid(uid), setWindowStates(ws => ({
+    ...ws,
+    [uid]: { ...ws[uid], open: true, minimized: false }
   }))];
 
   const handleClose = (uid) => setWindowStates(ws => ({
@@ -91,7 +95,7 @@ const handleLauncher = () => {
   </div>
   <comp.Dock windowStates={windowStates}
   onOpen={handleRestore} bringToFront={bringToFront} handleLauncher={handleLauncher}   />
-  <comp.Launcher state={launcherState} onOpen={handleRestore} handleLauncher={handleLauncher} />
+  <comp.Launcher state={launcherState} onOpen={handleLaunchRestore} handleLauncher={handleLauncher} />
   </>
   )
 };

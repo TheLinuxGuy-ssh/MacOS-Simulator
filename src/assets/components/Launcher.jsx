@@ -7,7 +7,6 @@ const Launcher = ({state, onOpen, handleLauncher}) => {
     const apps = appsConfig.app;
     const handleRestore = (uid) => {
         onOpen(uid);
-        handleLauncher;
     }
     return (
         <>
