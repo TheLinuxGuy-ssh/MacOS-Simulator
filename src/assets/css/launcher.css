@@ -5,8 +5,17 @@
     width: 100%;
     height: 100%;
     z-index: 20;
-    display: none;
-    background-color:aqua;
+    transition: 0.1s all;
+}
+
+.launcher.closed {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.launcher.show {
+    opacity: 1;
+    visibility:visible;
 }
 
 .launcher .liquidGlass {
@@ -19,10 +28,26 @@
 }
 
 .launcher-content {
-    display: block;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     position: fixed;
     width: 90%;
     height: 90%;
-    padding: 5%;
+    margin: 5%;
+    justify-content:space-between;
 }
 
+.launcher-content .app {
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+}
+.launcher-content .app img {
+    width: 100%;
+}
+
+.launcher-content .app .app-name {
+    color: #fff;
+    text-align: center;
+}

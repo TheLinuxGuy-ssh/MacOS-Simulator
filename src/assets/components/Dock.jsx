@@ -33,11 +33,11 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
       <div className="dock">
         <LiquidGlass />
         <ul className="dock-container">
-          <li key={0} className="dock-li" onClick={handleLauncher}>
+          <li className="dock-li">
             <div className="name">
               <LiquidGlass />
               Launcher</div>
-            <img src="./applauncher.png" className="ico" alt="" />
+            <img src="./applauncher.png" onClick={handleLauncher} className="ico" alt="" />
           </li>
           {appsConfig.app.map((item, index) => (
             <li key={item.uid} className={`dock-li ${windowStates[item.uid].open ? `active` : ``}`}>

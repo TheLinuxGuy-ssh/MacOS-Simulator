@@ -59,7 +59,10 @@ const handleMaximize = (uid) => {
     [uid]: { ...ws[uid], open: false, minimized: false }
   }), setFocusUid(null));
 
-  const handleLauncher = () => setLauncherState(true);
+const handleLauncher = () => {
+  console.log("clicked");
+  setLauncherState(prev => !prev);
+}
   return (
     <>
     <comp.Topbar focused={focusedApp} />
@@ -88,7 +91,7 @@ const handleMaximize = (uid) => {
   </div>
   <comp.Dock windowStates={windowStates}
   onOpen={handleRestore} bringToFront={bringToFront} handleLauncher={handleLauncher}   />
-  <comp.Launcher className={` ${launcherState ? "hidden" : "open" }`} />
+  <comp.Launcher state={launcherState} onOpen={handleRestore} handleLauncher={handleLauncher} />
   </>
   )
 };
