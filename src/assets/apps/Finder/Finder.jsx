@@ -7,9 +7,11 @@ const Finder = () => {
         <br /><br />
         What works:
         <li>The glass UI feel to the whole environment</li>
+        <li>The Window functions such as focus and all application handling such as close, minimise and maximise.</li>
         <li>All dock interactions leaving the applauncher</li>
         <li>Topbar Simulation (no interaction) with status changing with the current app focused</li>
-        <li>All window interaction</li>
+        <li><b>A flexible application handling backend along with an installer(visible only in backend) for the future community to post apps for the project</b></li>
+        <li>More features coming..</li>
         </div>
     )
 }
