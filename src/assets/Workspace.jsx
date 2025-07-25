@@ -1,13 +1,8 @@
 import { useState, useRef } from "react";
-import "../css/window.css";
-import config from "../data/config";
-import Topbar from "./Topbar";
-import Dock from "./Dock";
-import Window from "../components/Window";
-import Launcher from "../apps/Launcher";
-import * as Apps from "../apps";
-import LiquidGlass from "../components/LiquidGlass";
-
+import "./css/window.css";
+import config from "./data/config";
+import * as comp from "./components";
+import * as Apps from "./apps";
 const componentMap = Apps;
 
 const Workspace = () => {
@@ -15,6 +10,7 @@ const Workspace = () => {
   const [windowStates, setWindowStates] = useState(
     Object.fromEntries(config.app.map(app => [app.uid, { open: false, minimized: false, isminimizing: false, maximized: false }]))
   );
+  const [launcherState, setLauncherState] = useState(false);
   const [focusedUid, setFocusUid] = useState(null);
   const apps = config.app;
 
@@ -63,19 +59,23 @@ const handleMaximize = (uid) => {
     [uid]: { ...ws[uid], open: false, minimized: false }
   }), setFocusUid(null));
 
+  const handleLauncher = () => {
+    setLauncherState(true);
+  }
+
   return (
     <>
-    <Topbar focused={focusedApp} />
+    <comp.Topbar focused={focusedApp} />
   <div className="workspace">
     {apps.map(app => {
         const AppComponent = componentMap[app.Name] || (() => <div>Unknown App: {app.Name}</div>);
         return (
             windowStates[app.uid]?.open ? (
-              <Window
+              <comp.Window
   key={app.uid}
   uid={app.uid}
   zIndex={zIndexes[app.uid] || 1}
-  bringToFront={bringToFront}
+  bringToFron t={bringToFront}
   appMeta={app}
   type="app"
   className={`${windowStates[app.uid]?.minimized ? "app-hidden " : " "} ${windowStates[app.uid]?.isminimizing ? "app-minimising" : ""} ${windowStates[app.uid]?.maximized ? "app-maximized" : ""}`}
@@ -84,15 +84,14 @@ const handleMaximize = (uid) => {
   onMaximize={() => handleMaximize(app.uid)}
 >
   <AppComponent />
-</Window>
-
+</comp.Window>
      ) : null
         );
       })}
   </div>
-  <Dock windowStates={windowStates}
-  onOpen={handleRestore} bringToFront={bringToFront}   />
-  <Launcher />
+  <comp.Dock windowStates={windowStates}
+  onOpen={handleRestore} bringToFront={bringToFront} handleLauncher={handleLauncher}   />
+  <comp.Launcher className={` ${launcherState ? "hidden" : "open" }`} />
   </>
   )
 };

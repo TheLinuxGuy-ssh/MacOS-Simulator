@@ -1,11 +1,22 @@
 import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
+import Config from "../data/config";
 import { DropItem, DropSeparator, Drop } from "../components/Drop";
 
 const Topbar = ({ focused }) => {
+  const Topbar = Config.app.Options;
   return (
     <>
+
       <div className="topbar">
-        <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]}>
+        <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]} />
+      {/* {Topbar.map((topbar, index) => (
+        <Drop key={topbar.Name || index} className="topbar-btn topbar-app" title={topbar.Name} alt="">
+          {topbar.Subs?.map((topitem, topindex) => (
+            <DropItem key={topitem}>{topitem.Name}</DropItem>
+          ))}
+        </Drop>
+      ))} */}
+        <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
           <DropItem>About This Mac</DropItem>
           <DropSeparator />
           <DropItem>System Preferences...</DropItem>
@@ -15,8 +26,6 @@ const Topbar = ({ focused }) => {
           <DropItem>Sleep</DropItem>
           <DropItem>Restart</DropItem>
           <DropItem>Shutdown</DropItem>
-        </Drop>
-        <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
           <DropItem>About {focused ? focused.Name : "Finder"}</DropItem>
           <DropSeparator />
           <DropItem>Quit</DropItem>

@@ -5,7 +5,18 @@
     {
     "uid": 1,
     "Name": "Finder",
-    "Icon": "./finder.png"
+    "Icon": "./finder.png",
+    "Options": [
+        {
+            "Name": "Files",
+            "Subs": [
+                {
+                    "Name": "New +",
+                    "Action": ""
+                }
+            ]
+        }
+    ]
     },
     {
     "uid": 2,

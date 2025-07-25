@@ -3,7 +3,7 @@ import { useState } from "react";
 import LiquidGlass from "../components/LiquidGlass";
 import appsConfig from "../data/config.json";
 
-const Dock = ({ windowStates, onOpen }) => {
+const Dock = ({ windowStates, onOpen, handleLauncher }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const handleIconClick = (uid) => {
     onOpen(uid);
@@ -32,12 +32,12 @@ const Dock = ({ windowStates, onOpen }) => {
       <div className="dock">
         <LiquidGlass />
         <ul className="dock-container">
-          {/* <li key={0} className="dock-li">
+          <li key={0} className="dock-li" onClick={handleLauncher}>
             <div className="name">
               <LiquidGlass />
               Launcher</div>
             <img src="./applauncher.png" className="ico" alt="" />
-          </li> */}
+          </li>
           {appsConfig.app.map((item, index) => (
             <li key={item.uid} className={`dock-li ${windowStates[item.uid].open ? `active` : ``}`}>
               <div className="name">
