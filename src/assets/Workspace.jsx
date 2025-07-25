@@ -75,7 +75,7 @@ const handleMaximize = (uid) => {
   key={app.uid}
   uid={app.uid}
   zIndex={zIndexes[app.uid] || 1}
-  bringToFron t={bringToFront}
+  bringToFront={bringToFront}
   appMeta={app}
   type="app"
   className={`${windowStates[app.uid]?.minimized ? "app-hidden " : " "} ${windowStates[app.uid]?.isminimizing ? "app-minimising" : ""} ${windowStates[app.uid]?.maximized ? "app-maximized" : ""}`}
