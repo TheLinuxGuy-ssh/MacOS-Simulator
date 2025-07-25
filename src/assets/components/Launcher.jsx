@@ -3,10 +3,10 @@ import { useState } from "react";
 import LiquidGlass from "../components/LiquidGlass";
 import appsConfig from "../data/config.json";
 
-const Launcher = (handleLauncher) => {
+const Launcher = (className) => {
     return(
         <>
-            <div className="launcher" onClick={handleLauncher}>
+            <div className={`launcher ${className}`}>
                 <LiquidGlass />
                 <div className="launcher-content">
     

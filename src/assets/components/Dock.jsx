@@ -18,6 +18,7 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
     setHoveredIndex(null);
   };
 
+  
   const scaleForIndex = (index) => {
     if (hoveredIndex === null) return "scale(1) translateY(0)";
     if (index === hoveredIndex) return "scale(1.5) translateY(-10px)";

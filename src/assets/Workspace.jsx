@@ -59,10 +59,7 @@ const handleMaximize = (uid) => {
     [uid]: { ...ws[uid], open: false, minimized: false }
   }), setFocusUid(null));
 
-  const handleLauncher = () => {
-    setLauncherState(true);
-  }
-
+  const handleLauncher = () => setLauncherState(true);
   return (
     <>
     <comp.Topbar focused={focusedApp} />
