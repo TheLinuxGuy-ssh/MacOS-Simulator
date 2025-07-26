@@ -56,7 +56,7 @@
 }
 
 .topbar-apple  {
-    width: 75%;
+    width: fit-content;
     height: 75%;
     aspect-ratio: 1 / 1;
     object-fit: contain;

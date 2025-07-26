@@ -3,9 +3,8 @@ import { useState } from "react";
 import Config from "../data/config";
 import { DropItem, DropSeparator, Drop } from "../components/Drop";
 
-const Topbar = ({ focused, onClose }) => {
+const Topbar = ({ focused, onClose, onOpen }) => {
   const Topbar = Config.app.Options;
-  console.log(focused);
   const handleClose = (uid) => {
     onClose(uid);
   }
@@ -26,7 +25,10 @@ const Topbar = ({ focused, onClose }) => {
 });
 setTime(time.replace(/,/g, '')) 
   }
-  setInterval(UpdateTime)
+  setInterval(UpdateTime);
+  const handleOpen = (uid) => {
+    onOpen(uid);
+  }
   return (
     <>
 
@@ -80,7 +82,7 @@ setTime(time.replace(/,/g, ''))
           <DropSeparator />
         </Drop> */}
         <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]}>
-          <DropItem>About This Mac</DropItem>
+          <DropItem onClick={() => handleOpen(1000)}>About This Mac</DropItem>
           <DropSeparator />
           <DropItem>System Preferences...</DropItem>
           <DropItem>Location</DropItem>
@@ -92,7 +94,6 @@ setTime(time.replace(/,/g, ''))
         </Drop>
         <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
           <DropItem>About {focused ? focused.Name : "Finder"}</DropItem>
-          <DropSeparator />
           {focused ? <DropItem onClick={() => handleClose(focused)}>Quit</DropItem> : ""}
         </Drop>
         </div>

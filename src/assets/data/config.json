@@ -1,6 +1,12 @@
 {
     "wallpaperlight": "/backgroundlight.png",
     "wallpaperdark": "/backgrounddark.png",
+    "popup": [
+        {
+            "uid": 1000,
+            "Name": "About"
+        }
+    ],
     "app": [
     {
     "uid": 1,
@@ -26,7 +32,7 @@
     {
     "uid": 3,
     "Name": "Safari",
-    "Icon": "./safari.png"    
+    "Icon": "./Safari.png"    
     }
 ],
     "widget": [

@@ -13,6 +13,7 @@
     "@radix-ui/themes": "^3.2.1",
     "jquery": "^3.7.1",
     "jquery-ui": "^1.14.1",
+    "react-device-detect": "^2.2.3",
     "react-dom": "^19.1.0",
     "react-easy-sort": "^1.6.0",
     "react-terminal": "^1.4.5",

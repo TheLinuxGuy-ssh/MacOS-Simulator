@@ -8,6 +8,9 @@
     overflow: hidden;
     padding: 0.2rem;
 }
+.popup.About {
+    width: 350px;
+}
 .window.pressed  {
     transition: none;
 }

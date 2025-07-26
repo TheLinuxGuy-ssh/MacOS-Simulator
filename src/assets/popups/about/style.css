@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+.container .browser-img{
+    width: 5rem;
+    height: 5rem;
+}
+.container .upper {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.content li {
+    list-style: none;
+    width: 100%;
+    display: flex;
+}
+.content li div {
+    width: 48%;
+    margin: 0 2%;
+
+}
+.about-title {
+    text-align: right;
+}
+.about-spec {
+    text-align: left;
+}

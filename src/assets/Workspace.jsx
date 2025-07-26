@@ -3,7 +3,10 @@ import "./css/window.css";
 import config from "./data/config";
 import * as comp from "./components";
 import * as Apps from "./apps";
+import * as Popups from "./popups";
+
 const componentMap = Apps;
+const componentPopup = Popups;
 
 const Workspace = () => {
   const workspaceRef = useRef(null);
@@ -17,12 +20,19 @@ const Workspace = () => {
           isminimizing: false,
           maximized: false,
         },
+      ]),
+      config.popup.map((popup) => [
+        popup.uid,
+        {
+          open: true
+        }
       ])
     )
   );
   const [launcherState, setLauncherState] = useState(false);
   const [focusedUid, setFocusUid] = useState(null);
   const apps = config.app;
+  const popups = config.popup;
 
   const [zIndexes, setZIndexes] = useState({});
   const [maxZ, setMaxZ] = useState(1);
@@ -32,7 +42,7 @@ const Workspace = () => {
     setMaxZ((prev) => prev + 1);
     setZIndexes((prev) => ({ ...prev, [uid]: maxZ + 1 }));
   };
-  const focusedApp = apps.find((app) => app.uid === focusedUid);
+  const focusedApp = apps.find((app) => app.uid === focusedUid) || popups.find((popup) => popup.uid === focusedUid);
   const handleMinimize = (uid) => {
     setWindowStates((ws) => ({
       ...ws,
@@ -85,7 +95,6 @@ const Workspace = () => {
     );
 
   const handleLauncher = () => {
-    console.log("clicked");
     setLauncherState((prev) => !prev);
   };
   return (
@@ -93,6 +102,7 @@ const Workspace = () => {
       <comp.Topbar
         focused={focusedApp}
         onClose={() => handleClose(focusedApp.uid)}
+        onOpen={handleRestore}
       />
       <div className="workspace">
         {apps.map((app) => {
@@ -117,6 +127,14 @@ const Workspace = () => {
               onMaximize={() => handleMaximize(app.uid)}
             >
               <AppComponent />
+            </comp.Window>
+          ) : null;
+        })}
+        {popups.map((popup) => {
+          const PopupComponent = componentPopup[popup.Name]; 
+          return windowStates[popup.uid]?.open ? (
+            <comp.Window key={popup.uid} type="popup" className={`${popup.Name}`} uid={popup.uid} zIndex={zIndexes[popup.uid] || 1} bringToFront={bringToFront} onClose={() => handleClose(popup.uid)}>
+              <PopupComponent />
             </comp.Window>
           ) : null;
         })}
