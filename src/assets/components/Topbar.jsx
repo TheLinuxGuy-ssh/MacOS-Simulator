@@ -2,8 +2,12 @@ import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
 import Config from "../data/config";
 import { DropItem, DropSeparator, Drop } from "../components/Drop";
 
-const Topbar = ({ focused }) => {
+const Topbar = ({ focused, onClose }) => {
   const Topbar = Config.app.Options;
+  console.log(focused);
+  const handleClose = (uid) => {
+    onClose(uid);
+  }
   return (
     <>
 
@@ -69,7 +73,7 @@ const Topbar = ({ focused }) => {
         <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
           <DropItem>About {focused ? focused.Name : "Finder"}</DropItem>
           <DropSeparator />
-          <DropItem>Quit</DropItem>
+          {focused ? <DropItem onClick={() => handleClose(focused)}>Quit</DropItem> : ""}
         </Drop>
       </div>
     </>

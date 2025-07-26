@@ -1,7 +1,7 @@
 {
     "wallpaperlight": "/backgroundlight.png",
     "wallpaperdark": "/backgrounddark.png",
-    "app": [ 
+    "app": [
     {
     "uid": 1,
     "Name": "Finder",

@@ -1,9 +1,9 @@
 import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
 import LiquidGlass from "./LiquidGlass";
 
-const DropItem = ({ children, shortcut }) => {
+const DropItem = ({ children, shortcut, onClick }) => {
   return (
-      <DropdownMenu.Item shortcut={shortcut}>{children}</DropdownMenu.Item>
+      <DropdownMenu.Item shortcut={shortcut} onClick={onClick}>{children}</DropdownMenu.Item>
   );
 };
 
