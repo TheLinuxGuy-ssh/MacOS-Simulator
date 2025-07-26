@@ -8,7 +8,8 @@
     color: var(--app-color-light-contrast);
     fill: var(--app-color-light-contrast);
     backdrop-filter: blur(10px);
-    padding: 0px 10px;
+    padding: 0px 0px;
+    display: flex;
     border-bottom: 1px solid #5f5f5f;
 }
 .topbar .rt-BaseButton:where(.rt-r-size-2) {
@@ -23,7 +24,15 @@
 .topbar .rt-BaseButton:where(.rt-r-size-2)[data-state="open"] {
     background-color: #5f5f5f;
 }
-
+.topbar-left, .topbar-right {
+    height: 100%;
+    width: 100%;
+    margin: 0 0.5rem;
+}
+.topbar-right {
+    display: flex;
+    justify-content: end !important;
+}
 .topbar-btn {
     background-color: transparent;
     color: #fff;
@@ -34,6 +43,12 @@
     font-size: 1rem;
     font-weight: 400;
     padding: 0 0.75rem;
+    border-radius: 0.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.1s;
 }
 
 .rt-BaseMenuSeparator {

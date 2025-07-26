@@ -1,4 +1,5 @@
 import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
+import { useState } from "react";
 import Config from "../data/config";
 import { DropItem, DropSeparator, Drop } from "../components/Drop";
 
@@ -8,10 +9,22 @@ const Topbar = ({ focused, onClose }) => {
   const handleClose = (uid) => {
     onClose(uid);
   }
+  const handleRefresh = () => {
+    window.location.reload()
+  }
+  let time  = new Date().toLocaleTimeString()
+
+  const [ctime,setTime] = useState(time)
+  const UpdateTime=()=>{
+    time =  new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
+    setTime(time)
+  }
+  setInterval(UpdateTime)
   return (
     <>
 
       <div className="topbar">
+        <div className="topbar-left">
         {/* <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]} /> */}
       {/* {Topbar.map((topbar, index) => (
         <Drop key={topbar.Name || index} className="topbar-btn topbar-app" title={topbar.Name} alt="">
@@ -67,7 +80,7 @@ const Topbar = ({ focused, onClose }) => {
           <DropItem>App Store...</DropItem>
           <DropSeparator />
           <DropItem>Sleep</DropItem>
-          <DropItem>Restart</DropItem>
+          <DropItem onClick={handleRefresh}>Restart</DropItem>
           <DropItem>Shutdown</DropItem>
         </Drop>
         <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
@@ -75,6 +88,12 @@ const Topbar = ({ focused, onClose }) => {
           <DropSeparator />
           {focused ? <DropItem onClick={() => handleClose(focused)}>Quit</DropItem> : ""}
         </Drop>
+        </div>
+        <div className="topbar-right">
+          <div className="topbar-btn clock">
+            {ctime}
+          </div>
+        </div>
       </div>
     </>
   );
