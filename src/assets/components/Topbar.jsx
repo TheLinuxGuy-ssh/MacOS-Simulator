@@ -12,12 +12,19 @@ const Topbar = ({ focused, onClose }) => {
   const handleRefresh = () => {
     window.location.reload()
   }
-  let time  = new Date().toLocaleTimeString()
+  let time  = new Date().toLocaleTimeString();
+  const formattedTime = time.replace(/,/g, '');
 
-  const [ctime,setTime] = useState(time)
+  const [ctime,setTime] = useState(formattedTime)
   const UpdateTime=()=>{
-    time =  new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
-    setTime(time)
+    const time = new Date().toLocaleString('en-US', {
+  weekday: 'short',
+  month: 'short',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+});
+setTime(time.replace(/,/g, '')) 
   }
   setInterval(UpdateTime)
   return (
