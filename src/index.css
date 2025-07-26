@@ -116,7 +116,9 @@ button:focus-visible {
   border-radius: 1.8rem;
 
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   filter: url(#glass-distortion);
+  -webkit-filter: url(#glass-distortion);
   overflow: hidden;
   isolation: isolate;
   border-radius: 1.8rem;
