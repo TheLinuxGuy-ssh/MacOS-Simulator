@@ -9,7 +9,7 @@ const Terminal = () => {
     help: "whoami\ncd\nls\nclear\nhelp",
   };
   return (
-    <div className="Terminal">
+    <div className="Term">
       <ReactTerminal
         prompt="root@macos:~#"
         commands={commands}

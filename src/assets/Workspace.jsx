@@ -124,7 +124,8 @@ const Workspace = () => {
                 windowStates[app.uid]?.minimized ? "app-hidden " : " "
               } ${
                 windowStates[app.uid]?.isminimizing ? "app-minimising" : ""
-              } ${windowStates[app.uid]?.maximized ? "app-maximized" : ""}`}
+              } ${windowStates[app.uid]?.maximized ? "app-maximized" : ""}
+              ${app.Name}`}
               onClose={() => handleClose(app.uid)}
               onMinimize={() => handleMinimize(app.uid)}
               onMaximize={() => handleMaximize(app.uid)}

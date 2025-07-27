@@ -37,6 +37,11 @@
       "uid": 3,
       "Name": "Safari",
       "Icon": "./safari-app.png"
+    },
+    {
+      "uid": 4,
+      "Name": "Calculator",
+      "Icon": "./calculator.png"  
     }
   ],
   "widget": [

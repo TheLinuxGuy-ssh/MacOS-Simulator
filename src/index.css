@@ -1,4 +1,3 @@
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -23,6 +22,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -51,9 +51,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -62,9 +64,11 @@ button:focus-visible {
 ::-webkit-scrollbar {
   width: 7.5px;
 }
+
 ::-webkit-scrollbar-thumb {
   border: 5px;
 }
+
 ::-webkit-scrollbar-button {
   display: none;
 }
@@ -74,9 +78,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
@@ -88,59 +94,17 @@ button:focus-visible {
   background-size: cover;
   z-index: -1;
 }
+
 .wallpaper img {
   width: 100%;
   height: 100%;
 }
+
 .workspace {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 35px;
-    width: 100%;
-    height: 100%;
-}
-
-.glass-svg {
-  display: none;
-}
-.liquidGlass-wrapper {
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
-  /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2); */
-}
-
-.liquidGlass-effect {
   position: absolute;
-  z-index: -3;
-  inset: 0;
-  border-radius: 1.8rem;
-
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  filter: url(#glass-distortion);
-  -webkit-filter: url(#glass-distortion);
-  overflow: hidden;
-  isolation: isolate;
-  border-radius: 1.8rem;
-}
-
-.liquidGlass-tint {
-  z-index: -2;
-  position: absolute;
-  inset: 0;
-  background: rgba(70, 70, 70, 0.322);
-  border-radius: 1.8rem;
-    backdrop-filter: blur(10px);
-}
-
-.liquidGlass-shine {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-
-  overflow: hidden;
-
-  box-shadow: inset 2px 2px 2px 0 rgba(112, 112, 112, 0.5),
-    inset -1px -1px 1.5px 2px rgba(128, 127, 127, 0.5);
-    border-radius: 1.8rem;
+  top: 0;
+  left: 0;
+  margin-top: 35px;
+  width: 100%;
+  height: 100%;
 }
