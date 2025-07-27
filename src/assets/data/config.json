@@ -1,48 +1,52 @@
 {
-    "wallpaperlight": "/backgroundlight.png",
-    "wallpaperdark": "/backgrounddark.png",
-    "popup": [
-        {
-            "uid": 1000,
-            "Name": "About"
-        }
-    ],
-    "app": [
+  "wallpaperlight": "/backgroundlight.png",
+  "wallpaperdark": "/backgrounddark.png",
+  "popup": [
     {
-    "uid": 1,
-    "Name": "Finder",
-    "Icon": "./finder.png",
-    "Options": [
-        {
-            "Name": "Files",
-            "Subs": [
-                {
-                    "Name": "New +",
-                    "Action": ""
-                }
-            ]
-        }
-    ]
+      "uid": 1000,
+      "Name": "AboutSys"
     },
     {
-    "uid": 2,
-    "Name": "Terminal",
-    "Icon": "./terminal.png"
-    },
-    {
-    "uid": 3,
-    "Name": "Safari",
-    "Icon": "./safari-app.png"    
+      "uid": 1001,
+      "Name": "AboutPackage"
     }
-],
-    "widget": [
+  ],
+  "app": [
+    {
+      "uid": 1,
+      "Name": "Finder",
+      "Icon": "./finder.png",
+      "Options": [
         {
-            "Name": "Weather",
-            "UID": 1000
-        },
-        {
-            "Name": "Files",
-            "UID": 2000
+          "Name": "Files",
+          "Subs": [
+            {
+              "Name": "New +",
+              "Action": ""
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "uid": 2,
+      "Name": "Terminal",
+      "Icon": "./terminal.png"
+    },
+    {
+      "uid": 3,
+      "Name": "Safari",
+      "Icon": "./safari-app.png"
+    }
+  ],
+  "widget": [
+    {
+      "Name": "Weather",
+      "UID": 1000
+    },
+    {
+      "Name": "Files",
+      "UID": 2000
+    }
+  ]
 }

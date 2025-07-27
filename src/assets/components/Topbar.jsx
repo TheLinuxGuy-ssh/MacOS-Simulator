@@ -7,42 +7,41 @@ const Topbar = ({ focused, onClose, onOpen }) => {
   const Topbar = Config.app.Options;
   const handleClose = (uid) => {
     onClose(uid);
-  }
+  };
   const handleRefresh = () => {
-    window.location.reload()
-  }
-  let time  = new Date().toLocaleTimeString();
-  const formattedTime = time.replace(/,/g, '');
+    window.location.reload();
+  };
+  let time = new Date().toLocaleTimeString();
+  const formattedTime = time.replace(/,/g, "");
 
-  const [ctime,setTime] = useState(formattedTime)
-  const UpdateTime=()=>{
-    const time = new Date().toLocaleString('en-US', {
-  weekday: 'short',
-  month: 'short',
-  day: '2-digit',
-  hour: '2-digit',
-  minute: '2-digit',
-});
-setTime(time.replace(/,/g, '')) 
-  }
+  const [ctime, setTime] = useState(formattedTime);
+  const UpdateTime = () => {
+    const time = new Date().toLocaleString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    setTime(time.replace(/,/g, ""));
+  };
   setInterval(UpdateTime);
   const handleOpen = (uid) => {
     onOpen(uid);
-  }
+  };
   return (
     <>
-
       <div className="topbar">
         <div className="topbar-left">
-        {/* <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]} /> */}
-      {/* {Topbar.map((topbar, index) => (
+          {/* <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]} /> */}
+          {/* {Topbar.map((topbar, index) => (
         <Drop key={topbar.Name || index} className="topbar-btn topbar-app" title={topbar.Name} alt="">
           {topbar.Subs?.map((topitem, topindex) => (
             <DropItem key={topitem}>{topitem.Name}</DropItem>
           ))}
         </Drop>
       ))} */}
-        {/* <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
+          {/* <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
           <DropItem>About This Mac</DropItem>
           <DropSeparator />
           <DropItem>System Preferences...</DropItem>
@@ -81,26 +80,38 @@ setTime(time.replace(/,/g, ''))
           <DropdownMenu.Item shortcut="⌘ D">Duplicate</DropdownMenu.Item>
           <DropSeparator />
         </Drop> */}
-        <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]}>
-          <DropItem onClick={() => handleOpen(1000)}>About This Mac</DropItem>
-          <DropSeparator />
-          <DropItem>System Preferences...</DropItem>
-          <DropItem>Location</DropItem>
-          <DropItem>App Store...</DropItem>
-          <DropSeparator />
-          <DropItem>Sleep</DropItem>
-          <DropItem onClick={handleRefresh}>Restart</DropItem>
-          <DropItem>Shutdown</DropItem>
-        </Drop>
-        <Drop title={focused ? focused.Name : "Finder"} className="topbar-btn topbar-app">
-          <DropItem>About {focused ? focused.Name : "Finder"}</DropItem>
-          {focused ? <DropItem onClick={() => handleClose(focused)}>Quit</DropItem> : ""}
-        </Drop>
+          <Drop
+            className="apple"
+            title={[
+              <img src="./apple-main.png" className="topbar-apple" alt="" />,
+            ]}
+          >
+            <DropItem onClick={() => handleOpen(1000)}>About This Mac</DropItem>
+            <DropSeparator />
+            <DropItem>System Preferences...</DropItem>
+            <DropItem>Location</DropItem>
+            <DropItem>App Store...</DropItem>
+            <DropSeparator />
+            <DropItem>Sleep</DropItem>
+            <DropItem onClick={handleRefresh}>Restart</DropItem>
+            <DropItem>Shutdown</DropItem>
+          </Drop>
+          <Drop
+            title={focused ? focused.Name : "Finder"}
+            className="topbar-btn topbar-app"
+          >
+            <DropItem onClick={() => handleOpen(focused)}>
+              About {focused ? focused.Name : "Finder"}
+            </DropItem>
+            {focused ? (
+              <DropItem onClick={() => handleClose(focused)}>Quit</DropItem>
+            ) : (
+              ""
+            )}
+          </Drop>
         </div>
         <div className="topbar-right">
-          <div className="topbar-btn clock">
-            {ctime}
-          </div>
+          <div className="topbar-btn clock">{ctime}</div>
         </div>
       </div>
     </>

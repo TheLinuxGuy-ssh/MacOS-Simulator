@@ -3,19 +3,18 @@ import LiquidGlass from "./LiquidGlass";
 
 const DropItem = ({ children, shortcut, onClick }) => {
   return (
-      <DropdownMenu.Item shortcut={shortcut} onClick={onClick}>{children}</DropdownMenu.Item>
+    <DropdownMenu.Item shortcut={shortcut} onClick={onClick}>
+      {children}
+    </DropdownMenu.Item>
   );
 };
 
 const DropSeparator = () => {
-  return (
-  <DropdownMenu.Separator />
-);
-}
+  return <DropdownMenu.Separator />;
+};
 
 const Drop = ({ title, children, color, size, variant, className }) => {
   return (
-    
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
         <Button
@@ -27,15 +26,14 @@ const Drop = ({ title, children, color, size, variant, className }) => {
           {title}
         </Button>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content className={`topbar-dropdown topbar-dropdown-${className}`}>
+      <DropdownMenu.Content
+        className={`topbar-dropdown topbar-dropdown-${className}`}
+      >
         <LiquidGlass />
-        {children}</DropdownMenu.Content>
+        {children}
+      </DropdownMenu.Content>
     </DropdownMenu.Root>
   );
 };
 
-export {
-  DropItem,
-  DropSeparator,
-  Drop
-}
+export { DropItem, DropSeparator, Drop };

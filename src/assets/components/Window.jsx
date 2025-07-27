@@ -128,7 +128,7 @@ const Window = ({
       <LiquidGlass />
       <div ref={topbarRef} className="window-topbar">
         <div className="window-topbar-buttons">
-            <LiquidGlass />
+          <LiquidGlass />
           {appMeta?.Icon && (
             <img
               src={appMeta.Icon}
@@ -171,44 +171,46 @@ const Window = ({
               />
             </svg>
           </div>
-          {type === "popup" ? "" : (
+          {type === "popup" ? (
+            ""
+          ) : (
             <>
-          <div
-            className="window-btn maximise"
-            onMouseDown={(e) => e.stopPropagation()}
-            onClick={(e) => {
-              e.stopPropagation();
-              onMinimize?.();
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="9"
-              height="9"
-              viewBox="0 0 9 9"
-            >
-              <line
-                x1="2.3"
-                y1="4.5"
-                x2="6.7"
-                y2="4.5"
-                stroke="#3E3E3E"
-                stroke-width="1.3"
-                stroke-linecap="round"
-              />
-            </svg>
-          </div>
-          <div
-            className="window-btn minimise window-btn-control"
-            onMouseDown={(e) => e.stopPropagation()}
-            onClick={(e) => {
-              e.stopPropagation();
-              onMaximize?.();
-            }}
-          >
-            <img src="./close.svg" className="window-btn-maximise" alt="" />
-          </div>
-          </>
+              <div
+                className="window-btn maximise"
+                onMouseDown={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onMinimize?.();
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9"
+                  height="9"
+                  viewBox="0 0 9 9"
+                >
+                  <line
+                    x1="2.3"
+                    y1="4.5"
+                    x2="6.7"
+                    y2="4.5"
+                    stroke="#3E3E3E"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div
+                className="window-btn minimise window-btn-control"
+                onMouseDown={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onMaximize?.();
+                }}
+              >
+                <img src="./close.svg" className="window-btn-maximise" alt="" />
+              </div>
+            </>
           )}
         </div>
       </div>

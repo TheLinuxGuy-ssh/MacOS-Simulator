@@ -24,8 +24,8 @@ const Workspace = () => {
       config.popup.map((popup) => [
         popup.uid,
         {
-          open: true
-        }
+          open: true,
+        },
       ])
     )
   );
@@ -42,7 +42,9 @@ const Workspace = () => {
     setMaxZ((prev) => prev + 1);
     setZIndexes((prev) => ({ ...prev, [uid]: maxZ + 1 }));
   };
-  const focusedApp = apps.find((app) => app.uid === focusedUid) || popups.find((popup) => popup.uid === focusedUid);
+  const focusedApp =
+    apps.find((app) => app.uid === focusedUid) ||
+    popups.find((popup) => popup.uid === focusedUid);
   const handleMinimize = (uid) => {
     setWindowStates((ws) => ({
       ...ws,
@@ -97,6 +99,7 @@ const Workspace = () => {
   const handleLauncher = () => {
     setLauncherState((prev) => !prev);
   };
+
   return (
     <>
       <comp.Topbar
@@ -131,9 +134,17 @@ const Workspace = () => {
           ) : null;
         })}
         {popups.map((popup) => {
-          const PopupComponent = componentPopup[popup.Name]; 
+          const PopupComponent = componentPopup[popup.Name];
           return windowStates[popup.uid]?.open ? (
-            <comp.Window key={popup.uid} type="popup" className={`${popup.Name}`} uid={popup.uid} zIndex={zIndexes[popup.uid] || 1} bringToFront={bringToFront} onClose={() => handleClose(popup.uid)}>
+            <comp.Window
+              key={popup.uid}
+              type="popup"
+              className={`${popup.Name}`}
+              uid={popup.uid}
+              zIndex={zIndexes[popup.uid] || 1}
+              bringToFront={bringToFront}
+              onClose={() => handleClose(popup.uid)}
+            >
               <PopupComponent />
             </comp.Window>
           ) : null;

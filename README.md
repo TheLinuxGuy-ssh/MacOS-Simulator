@@ -6,6 +6,8 @@ An online experience of macOS at the cost of nothing but Internet packets (prefe
 
 ## Features Added: 
 
+- Popups Component
+- About System Popup
 - Topbar options
 - Window Animations
 - Dock Animations
@@ -16,7 +18,14 @@ An online experience of macOS at the cost of nothing but Internet packets (prefe
 
 you might not find much to do here since the project has been a lot more focused on backend and its super efficient scalability, with the best possible methods of scalability in terms of apps with lots of features such as appcompilers as a way for the future of the project to make external apps installable on the simulator by its future community
 
+## Features to be added for next build
+
+- AboutPackage App for gathering info for items and displaying it to the frontend User.
+- Additional Terminal commands to create and delete files 
+
 ## What works:
+- Application state Management
+- About Current Browser window in topbar
 - Basic OS animations
   - app open dock
   - app minimise/maximise
@@ -26,9 +35,12 @@ you might not find much to do here since the project has been a lot more focused
 - All dock interactions leaving the applauncher
 - Topbar Simulation (no interaction) with status changing with the current app focused
 - All window interaction
+- Topbar Clock
 
-## How to run and Develop:
+## Development:
 
+- make sure you have nodejs(npm) installed on your machine
 - First install all nodejs dependencies with `npm install`
-- proceed to launch the local server with `npm run dev`
-- Voila you are up!!
+- Proceed to launch the local server with `npm run dev`
+- The Development server will now run at port `5173`
+- Voila you are up!
