@@ -1,33 +1,128 @@
+import "./style.css";
+
 const Finder = () => {
   return (
-    <div className="Finder" UID="1">
-      you might not find much to do here since the project has been a lot more
-      focused on backend, with the best possible methods of scalability in terms
-      of apps with lots of features such as appcompilers as a way for the future
-      of the project to make external apps installable on the simulator by its
-      future community
-      <br />
-      <br />
-      What works:
-      <li>The appmenu present at the start of the dock</li>
-      <li>The glass UI feel to the whole environment</li>
-      <li>
-        The Window functions such as focus and all application handling such as
-        close, minimise and maximise.
-      </li>
-      <li>All dock interactions leaving the applauncher</li>
-      <li>
-        Topbar Simulation (no interaction) with status changing with the current
-        app focused
-      </li>
-      <li>
-        <b>
-          A flexible application handling backend along with an
-          installer(visible only in backend) for the future community to post
-          apps for the project
-        </b>
-      </li>
+    <>
+    <div id='finder'>
+  <div id='toolbar'>
+    <div id='windowname'>
+      <i></i>
+      All My Files
     </div>
+    <div id='actions'>
+      <div id='back'></div>
+      <div id='next'></div>
+      <div id='iconV'></div>
+      <div id='list'></div>
+      <div id='grid'></div>
+      <div id='coverflow'>
+        <i className='view'></i>
+      </div>
+      <div id='settings'></div>
+      <div id='share'></div>
+      <input results='0' type='search' />
+    </div>
+  </div>
+  <div id='view'>
+    <div id='sidebar'>
+      <ul>
+        <li>
+          <span className='group'>
+            Favorites
+          </span>
+          <ul>
+            <li className='current_page'>
+              <i className='afiles'></i>
+              All My Files
+            </li>
+            <li>
+              <i className='airdrop'></i>
+              AirDrop
+            </li>
+            <li>
+              <i className='apps'></i>
+              Applications
+            </li>
+            <li>
+              <i className='desk'></i>
+              Desktop
+            </li>
+            <li>
+              <i className='docs'></i>
+              Documents
+            </li>
+            <li>
+              <i className='downs'></i>
+              Downloads
+            </li>
+            <li>
+              <i className='mov'></i>
+              Movies
+            </li>
+            <li>
+              <i className='music'></i>
+              Music
+            </li>
+            <li>
+              <i className='pic'></i>
+              Pictures
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span className='group'>
+            Shared
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div id='content'>
+      <div className='folder'>
+        <div className='icon'></div>
+        <span>
+          Desktop
+        </span>
+      </div>
+      <div className='folder'>
+        <div className='icon'></div>
+        <span>
+          Documents
+        </span>
+      </div>
+      <div className='folder'>
+        <div className='icon'></div>
+        <span>
+          Downloads
+        </span>
+      </div>
+      <div className='folder'>
+        <div className='icon'></div>
+        <span>
+          Movies
+        </span>
+      </div>
+      <div className='folder'>
+        <div className='icon'></div>
+        <span>
+          Music
+        </span>
+      </div>
+      <div className='folder'>
+        <div className='icon'></div>
+        <span>
+          Pictures
+        </span>
+      </div>
+      <div className='folder'>
+        <div className='icon'></div>
+        <span>
+          Public
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+</>
   );
 };
 
