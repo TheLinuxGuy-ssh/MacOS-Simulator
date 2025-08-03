@@ -108,6 +108,10 @@
   height: 100%;
   transition: 0.2s;
 }
+.dock .dock-container .dock-li .ico.rounded-full {
+
+  transition: 0.2s;
+}
 .dock .dock-container .dock-li .ico-bin {
   width: 94% !important;
   height: 94% !important;
@@ -138,3 +142,13 @@
  margin-bottom: 75px;
 } */
 
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+.h-full, .w-full {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.85);
+}

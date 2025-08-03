@@ -70,6 +70,20 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
                 />
               </li>
             ))}
+            <li className="dock-li">
+              <div className="name">
+                <LiquidGlass />
+                TheLinuxGuy
+              </div>
+              <a className="ico" href="https://github.com/thelinuxguy-ssh" target="_blank">
+              <img
+                src="./profile.png"
+                onClick={handleLauncher}
+                className="w-full h-full rounded-full"
+                alt=""
+              />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
