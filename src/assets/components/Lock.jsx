@@ -4,6 +4,7 @@ import {
   useNavigate
 } from "react-router-dom";
 import LiquidGlass from "./LiquidGlass";
+import Wallpaper from "./Wallpaper"
 
 const Lock = () => {
   let time = new Date().toLocaleTimeString();
@@ -43,6 +44,8 @@ const Lock = () => {
   });
 
   return (
+    <>
+    <Wallpaper />
     <div className="lockscreen">
       <LiquidGlass />
       <div className="info">
@@ -69,6 +72,7 @@ const Lock = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
