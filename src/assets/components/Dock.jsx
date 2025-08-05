@@ -70,6 +70,7 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
                 />
               </li>
             ))}
+            <hr className="dock-separator" />
             <li className="dock-li">
               <div className="name">
                 <LiquidGlass />

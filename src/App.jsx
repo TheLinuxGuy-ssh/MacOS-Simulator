@@ -1,14 +1,12 @@
 import "./App.css";
-import Splash from "./assets/components/Splash";
-import Wallpaper from "./assets/components/Wallpaper";
-import Workspace from "./assets/Workspace";
+import * as comp from "./assets/components"
 
 const App = () => {
   return (
     <>
-      <Splash />
-      <Wallpaper />
-      <Workspace />
+      <comp.Splash />
+      <comp.Wallpaper />
+      <comp.Workspace />
     </>
   );
 };

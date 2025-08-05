@@ -1,3 +1,6 @@
+export { default as Splash } from "./Splash";
+export { default as Wallpaper} from "./Wallpaper";
+export { default as Workspace } from "../Workspace";
 export { default as LiquidGlass } from "./LiquidGlass";
 export { default as Topbar } from "./Topbar";
 export { default as Window } from "./Window";
