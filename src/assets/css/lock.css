@@ -1,0 +1,88 @@
+.lockscreen .liquidGlass {
+    border-radius: 0;
+}
+
+.lockscreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    left: 0;
+    top: 0;
+}
+
+.info {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    text-align: center;
+}
+.info .date {
+    font-size: 1.25rem;
+    width: 100%;
+    height: 100%;
+}
+
+.info .time {
+    margin: 0;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.password-box {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-box .user .user-img {
+    width: 5rem;
+    height: 5rem;
+    margin: 0.75rem;
+}
+
+.password-box .user img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.password-box .username {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.password-box .hint {
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    letter-spacing: 0.07rem;
+}
+
+.password-box .lockscreen-password-box {
+    border-radius: 3rem;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 1rem;
+    background-color: #8a8a8a27;
+    transition: 0.1s;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.password-box .lockscreen-password-box:focus {
+   background-color: #8a8a8a65; 
+}
+
+.password-box ::-webkit-input-placeholder {
+    color: #b1b1b1;
+    text-align: left;
+}

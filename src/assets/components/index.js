@@ -1,8 +1,10 @@
-export { default as Splash } from "./Splash";
-export { default as Wallpaper} from "./Wallpaper";
-export { default as Workspace } from "../Workspace";
-export { default as LiquidGlass } from "./LiquidGlass";
-export { default as Topbar } from "./Topbar";
-export { default as Window } from "./Window";
-export { default as Launcher } from "./Launcher";
-export { default as Dock } from "./Dock";
+export { default as Desktop } from "../Desktop"
+export { default as Splash } from "./Splash"
+export { default as Lock } from "./Lock"
+export { default as Wallpaper} from "./Wallpaper"
+export { default as Workspace } from "./Workspace"
+export { default as LiquidGlass } from "./LiquidGlass"
+export { default as Topbar } from "./Topbar"
+export { default as Window } from "./Window"
+export { default as Launcher } from "./Launcher"
+export { default as Dock } from "./Dock"

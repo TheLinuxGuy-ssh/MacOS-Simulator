@@ -1,9 +1,9 @@
 import { useState, useRef } from "react";
-import "./css/window.css";
-import config from "./data/config";
-import * as comp from "./components";
-import * as Apps from "./apps";
-import * as Popups from "./popups";
+import "../css/window.css";
+import config from "../data/config";
+import * as comp from ".";
+import * as Apps from "../apps";
+import * as Popups from "../popups";
 
 const componentMap = Apps;
 const componentPopup = Popups;
