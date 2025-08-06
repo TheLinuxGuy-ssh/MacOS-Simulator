@@ -102,6 +102,7 @@ const Workspace = () => {
 
   return (
     <>
+      <comp.Keybinds onOpen={handleRestore} />
       <comp.Topbar
         focused={focusedApp}
         onClose={() => handleClose(focusedApp.uid)}

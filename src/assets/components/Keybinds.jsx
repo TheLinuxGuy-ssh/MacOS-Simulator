@@ -4,10 +4,13 @@ import {
   useNavigate
 } from "react-router-dom";
 
-const Keybinds = () => {
+const Keybinds = ({ onOpen }) => {
     const navigate = useNavigate();
-    useHotkeys('ctrl+shift+l, cmd+shift+l', () => {
+    useHotkeys('ctrl+alt+l, cmd+alt+l', () => {
     navigate('/');
+  });
+  useHotkeys('ctrl+alt+t, cmd+alt+t', ( ) => {
+    onOpen(2);
   });
   return null;
 }
