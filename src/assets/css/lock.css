@@ -43,6 +43,13 @@
     align-items: center;
 }
 
+.password-box .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .password-box .user .user-img {
     width: 5rem;
     height: 5rem;
@@ -76,6 +83,7 @@
     color: #fff;
     font-size: 1rem;
     text-align: center;
+    width: 12rem;
 }
 
 .password-box .lockscreen-password-box:focus {
@@ -85,4 +93,35 @@
 .password-box ::-webkit-input-placeholder {
     color: #b1b1b1;
     text-align: left;
+}
+
+.wrong-pass {
+    animation: 0.5s wrong;
+    color: rgb(255, 89, 89) !important;
+}
+
+@keyframes wrong {
+    0% {
+        margin-left: 2rem;
+        margin-right: 0;
+    }
+    20%{
+        margin-left: 0;
+        margin-right: 2rem;
+    }
+    40% {
+        margin-right: 0;
+        margin-left: 1rem;
+    }
+    60%{
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+    80% {
+        margin-right: 0;
+        margin-left: 0.5rem;
+    }
+    100% {
+        margin: 0;
+    }
 }
