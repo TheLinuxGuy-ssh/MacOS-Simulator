@@ -1,0 +1,58 @@
+.applauncher {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    transition: 0.1s all;
+}
+
+.applauncher.closed {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.applauncher.show {
+    opacity: 1;
+    visibility:visible;
+}
+
+.applauncher .liquidGlass {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.applauncher .liquidGlass-tint {
+    backdrop-filter: blur(15px);
+}
+
+.launcher-content {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+    justify-content:space-between;
+}
+
+.launcher-content .app {
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+}
+.launcher-content .app img {
+    width: 100%;
+
+
+
+
+
+}
+
+.launcher-content .app .app-name {
+    color: #fff;
+    text-align: center;
+}

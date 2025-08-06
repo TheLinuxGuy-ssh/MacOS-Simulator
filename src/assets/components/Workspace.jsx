@@ -161,6 +161,12 @@ const Workspace = () => {
         handleLauncher={handleLauncher}
       />
       </div>
+      com
+      <comp.AppLauncher
+        state={launcherState}
+        onOpen={handleLaunchRestore}
+        handleLauncher={handleLauncher}
+      />
       <comp.Launcher
         state={launcher}
         onOpen={handleLaunchRestore}

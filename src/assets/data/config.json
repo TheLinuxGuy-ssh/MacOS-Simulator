@@ -42,6 +42,11 @@
       "uid": 4,
       "Name": "Calculator",
       "Icon": "./calculator.png"  
+    },
+    {
+      "uid": 5,
+      "Name": "Tips",
+      "Icon": "./Tips.png"
     }
   ],
   "widget": [
