@@ -45,6 +45,6 @@
     transition: 0.2s;
 }
 
-.launcher-option:hover {
+.launcher-option:hover, .launcher-option:focus, .launcher-option:active, .launcher-option[data-focus] {
   background: rgba(151, 151, 151, 0.144);
 }

@@ -169,6 +169,7 @@ const Workspace = () => {
       />
       <comp.Launcher
         state={launcher}
+        manageState={setLauncher}
         onOpen={handleLaunchRestore}
         handleLauncher={handleLauncher}
         onAppOpen={handleRestore}
