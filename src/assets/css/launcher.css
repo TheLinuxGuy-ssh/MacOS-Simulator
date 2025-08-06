@@ -1,53 +1,25 @@
 .launcher {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 20;
-    transition: 0.1s all;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    width: ;
 }
-
-.launcher.closed {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.launcher.show {
-    opacity: 1;
-    visibility:visible;
-}
-
-.launcher .liquidGlass {
-    border-radius: 0;
-    box-shadow: none;
-}
-
-.launcher .liquidGlass-tint {
-    backdrop-filter: blur(15px);
-}
-
-.launcher-content {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
-    position: fixed;
-    width: 90%;
-    height: 90%;
-    margin: 5%;
-    justify-content:space-between;
-}
-
-.launcher-content .app {
-    width: 6rem;
-    height: 6rem;
-    text-align: center;
-}
-.launcher-content .app img {
-    width: 100%;
-}
-
-.launcher-content .app .app-name {
+.launcher .launcher-search-box .fa-search {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #fff;
-    text-align: center;
+}
+.launcher .launcher-search-box .launcher-box {
+    
+    background-color:transparent;
+    color: #fff;
+    font-size: 1.5rem;
+    outline: 0;
+    border: 0;
+}
+
+.launcher .launcher-search-box ::-webkit-input-placeholder {
+    color: #fff;
 }

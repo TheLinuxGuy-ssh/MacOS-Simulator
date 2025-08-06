@@ -29,6 +29,7 @@ const Workspace = () => {
       ])
     )
   );
+  const [ launcher, setLauncher ] = useState(false);
   const [launcherState, setLauncherState] = useState(false);
   const [focusedUid, setFocusUid] = useState(null);
   const apps = config.app;
@@ -102,7 +103,8 @@ const Workspace = () => {
 
   return (
     <>
-      <comp.Keybinds onOpen={handleRestore} />
+    <div className="spotlight" onClick={() => setLauncher(false)}>
+      <comp.Keybinds handleLaunch={setLauncher} onOpen={handleRestore} />
       <comp.Topbar
         focused={focusedApp}
         onClose={() => handleClose(focusedApp.uid)}
@@ -158,8 +160,9 @@ const Workspace = () => {
         bringToFront={bringToFront}
         handleLauncher={handleLauncher}
       />
+      </div>
       <comp.Launcher
-        state={launcherState}
+        state={launcher}
         onOpen={handleLaunchRestore}
         handleLauncher={handleLauncher}
       />

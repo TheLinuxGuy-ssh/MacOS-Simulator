@@ -74,6 +74,7 @@ const Lock = () => {
           value={password || ''}
           onChange={handleChange}
           placeholder="Enter Password"
+          autoFocus
         />
         </form>
       </div>
