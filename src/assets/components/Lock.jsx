@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import LiquidGlass from "./LiquidGlass";
 import Wallpaper from "./Wallpaper"
+import { Splash } from ".";
 
 const Lock = () => {
   let time = new Date().toLocaleTimeString();
@@ -51,6 +52,7 @@ const Lock = () => {
 
   return (
     <>
+    <Splash />
     <Wallpaper />
     <div className="lockscreen">
       <LiquidGlass />
