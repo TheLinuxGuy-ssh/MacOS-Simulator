@@ -22,3 +22,29 @@
 .launcher .launcher-search-box ::-webkit-input-placeholder {
     color: #fff;
 }
+
+.launcher-option-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -1.75rem;
+    margin-top: 1rem;
+    width: 21.75rem;
+    border-radius: 1.8rem;
+  background: rgba(70, 70, 70, 0.322);
+  box-shadow: inset 2px 2px 2px 0 rgba(112, 112, 112, 0.5),
+    inset -1px -1px 1.5px 2px rgba(128, 127, 127, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.launcher-option {
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.launcher-option:hover {
+  background: rgba(151, 151, 151, 0.144);
+}

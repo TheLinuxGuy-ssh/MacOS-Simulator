@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.7",
     "@radix-ui/themes": "^3.2.1",
     "jquery": "^3.7.1",
     "jquery-ui": "^1.14.1",

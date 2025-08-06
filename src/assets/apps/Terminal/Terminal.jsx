@@ -5,7 +5,7 @@ const Terminal = () => {
   const commands = {
     whoami: "root",
     cd: (directory) => `changed path to ${directory}`,
-    ls: "bin\tboot\tdev\tetc\thome\tlib\tlib64\tmedia\tmnt\topt\tproc\troot\tproc\troot\trun\tsbin\tsrv\tsys\ttmp\tusr\tvar",
+    ls: "bin\tboot\tdev\tetc\thome\tlib\tlib64\tmedia\tmnt\topt\tproc\troot\trun\tsbin\tsrv\tsys\ttmp\tusr\tvar",
     help: "whoami\ncd\nls\nclear\nhelp",
   };
   return (

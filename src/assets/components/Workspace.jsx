@@ -171,6 +171,7 @@ const Workspace = () => {
         state={launcher}
         onOpen={handleLaunchRestore}
         handleLauncher={handleLauncher}
+        onAppOpen={handleRestore}
       />
     </>
   );
