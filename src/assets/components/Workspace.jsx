@@ -123,7 +123,7 @@ const Workspace = () => {
               bringToFront={bringToFront}
               appMeta={app}
               type="app"
-              className={`${
+              className={`${ 
                 windowStates[app.uid]?.minimized ? "app-hidden " : " "
               } ${
                 windowStates[app.uid]?.isminimizing ? "app-minimising" : ""

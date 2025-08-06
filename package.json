@@ -19,6 +19,7 @@
     "react-easy-sort": "^1.6.0",
     "react-hotkeys-hook": "^5.1.0",
     "react-point": "^3.0.1",
+    "react-resizable": "^3.0.5",
     "react-router-dom": "^7.7.1",
     "react-terminal": "^1.4.5",
     "vite-jsconfig-paths": "^2.0.1"

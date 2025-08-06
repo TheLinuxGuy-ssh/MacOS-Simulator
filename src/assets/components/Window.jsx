@@ -157,8 +157,8 @@ const Window = ({
                 x2="7"
                 y2="7"
                 stroke="#3E3E3E"
-                stroke-width="1.3"
-                stroke-linecap="round"
+                strokeWidth="1.3"
+                strokeLinecap="round"
               />
               <line
                 x1="7"
@@ -166,8 +166,8 @@ const Window = ({
                 x2="2"
                 y2="7"
                 stroke="#3E3E3E"
-                stroke-width="1.3"
-                stroke-linecap="round"
+                strokeWidth="1.3"
+                strokeLinecap="round"
               />
             </svg>
           </div>
@@ -195,8 +195,8 @@ const Window = ({
                     x2="6.7"
                     y2="4.5"
                     stroke="#3E3E3E"
-                    stroke-width="1.3"
-                    stroke-linecap="round"
+                    strokeWidth="1.3"
+                    strokeLinecap="round"
                   />
                 </svg>
               </div>
