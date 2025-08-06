@@ -16,6 +16,7 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "^19.1.0",
     "react-easy-sort": "^1.6.0",
+    "react-hotkeys-hook": "^5.1.0",
     "react-point": "^3.0.1",
     "react-router-dom": "^7.7.1",
     "react-terminal": "^1.4.5",
