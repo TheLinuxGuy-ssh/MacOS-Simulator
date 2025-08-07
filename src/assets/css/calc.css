@@ -1,7 +1,7 @@
 .calc-screen {
   margin-bottom: 1rem;
   background-color: ;
-  font-size: 5rem;
+  font-size: 2rem;
   text-align: right;
   border-radius: 4px;
   overflow-y: auto;
@@ -28,7 +28,7 @@
   height: 70px;
   background-color: #333;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 65.5px;
   border-radius: 50%;
   display: flex;

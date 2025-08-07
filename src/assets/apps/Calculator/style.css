@@ -47,8 +47,7 @@
 .calculator-display {
   color: white;
   background-color: #2a2928;
-  line-height: 130px;
-  font-size: 4em;
+  font-size:3em;
   
   flex: 1;
 }
@@ -76,18 +75,17 @@
 }
 
 .key-0 {
-    margin-right: 8px;
     border-radius: 1.8rem !important;
 }
 
 .calculator-keypad {
-  height: 420px;
+  height: fit-content;
   
   display: flex;
 }
 
 .calculator .input-keys {
-  width: 250px;
+  margin-right: 0.25rem;
 }
 
 .calculator .function-keys {
@@ -95,42 +93,46 @@
 }
 
 .calculator .digit-keys {
-  
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap-reverse;
+  flex-direction: column;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .calculator-key {
-  width: 80px;
-  height: 80px;
+  width: 3.5rem;
+  height: 3.5rem;
   border-top: 1px solid #777;
   border-right: 1px solid #666;  
   text-align: center;
-  line-height: 80px;
+  display: flex;
 }
 .calculator .function-keys .calculator-key {
-  font-size: 2em;
+  font-size: 1.25em;
 }
 .calculator .function-keys .key-multiply {
   line-height: 50px;
 }
 .calculator .digit-keys .calculator-key {
-  font-size: 2.25em;
+  font-size: 1.25em;
 }
 .calculator .digit-keys .key-0 {
-  width: 160px;
-  text-align: left;
-  padding-left: 32px;
+  width: 100%;
+  text-align: center;
 }
 .calculator .digit-keys .key-dot {
   padding-top: 1em;
   font-size: 0.75em;
+  width: 5.5rem !important;
+  margin-left: 0.2rem;
 }
 .calculator .operator-keys .calculator-key {
   color: white;
   border-right: 0;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .calculator .digit-keys .calc-key {

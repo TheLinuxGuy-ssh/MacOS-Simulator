@@ -25,7 +25,6 @@ export function Calculator() {
   const [operator, setOperator] = useState(null);
   const [waitingForOperand, setWaitingForOperand] = useState(false);
 
-  // Dummy AutoScalingText: just renders children for simplicity
   function AutoScalingText({ children }) {
     return <div className="auto-scaling-text">{children}</div>;
   }
@@ -113,8 +112,6 @@ export function Calculator() {
     }
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-    // Only run once
-    // eslint-disable-next-line
   }, [displayValue, waitingForOperand, value, operator]);
 
   const clearable = displayValue !== "0";
@@ -143,16 +140,8 @@ export function Calculator() {
             </CalculatorKey>
           </div>
           <div className="digit-keys">
-            <CalculatorKey
-              className="calc-key key-0"
-              onPress={() => inputDigit(0)}
-            >
-              0
-            </CalculatorKey>
-            <CalculatorKey className="calc-key key-dot" onPress={inputDot}>
-              ●
-            </CalculatorKey>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+            <div className="flex-col">
+            {[9,8,7].map((n) => (
               <CalculatorKey
                 key={n}
                 className={`calc-key key-${n}`}
@@ -161,6 +150,44 @@ export function Calculator() {
                 {n}
               </CalculatorKey>
             ))}
+            </div>
+            <div className="flex-col">
+            {[6,5,4].map((n) => (
+              <CalculatorKey
+                key={n}
+                className={`calc-key key-${n}`}
+                onPress={() => inputDigit(n)}
+              >
+                {n}
+              </CalculatorKey>
+            ))}
+            </div>
+            <div className="flex-col">
+            {[3,2,1].map((n) => (
+              <CalculatorKey
+                key={n}
+                className={`calc-key key-${n}`}
+                onPress={() => inputDigit(n)}
+              >
+                {n}
+              </CalculatorKey>
+            ))}
+            </div>
+            <div className="flex-col">
+              
+            <CalculatorKey className="calc-key key-dot" onPress={inputDot}>
+              ●
+            </CalculatorKey>
+            {[0].map((n) => (
+              <CalculatorKey
+                key={n}
+                className={`calc-key key-${n}`}
+                onPress={() => inputDigit(n)}
+              >
+                {n}
+              </CalculatorKey>
+            ))}
+            </div>
           </div>
         </div>
         <div className="operator-keys">
