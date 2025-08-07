@@ -1,32 +1,49 @@
+import "./style.css";
+import { LiquidGlass } from "../../components";
+
 const Finder = () => {
   return (
-    <div className="Finder" UID="1">
-      you might not find much to do here since the project has been a lot more
-      focused on backend, with the best possible methods of scalability in terms
-      of apps with lots of features such as appcompilers as a way for the future
-      of the project to make external apps installable on the simulator by its
-      future community
-      <br />
-      <br />
-      What works:
-      <li>The appmenu present at the start of the dock</li>
-      <li>The glass UI feel to the whole environment</li>
-      <li>
-        The Window functions such as focus and all application handling such as
-        close, minimise and maximise.
-      </li>
-      <li>All dock interactions leaving the applauncher</li>
-      <li>
-        Topbar Simulation (no interaction) with status changing with the current
-        app focused
-      </li>
-      <li>
-        <b>
-          A flexible application handling backend along with an
-          installer(visible only in backend) for the future community to post
-          apps for the project
-        </b>
-      </li>
+    <div className="finder" UID="1">
+      <div className="sidebar">
+        <LiquidGlass />
+        <div className="sidebar-items">
+        <div className="sidebar-item">
+          Applications
+        </div>
+        <div className="sidebar-item">
+          Documents
+        </div>
+        <div className="sidebar-item">
+          Downloads
+        </div>
+        </div>
+      </div>
+      <div className="finder-main">
+        <div className="finder-topbar">
+            <div className="topbar-start">
+                <div className="dual-back-forward">
+                  <div className="back-btn">
+                    <i className="fa fa-chevron-left"></i>
+                  </div>
+                  <hr className="dual-separate" />
+                  <div className="forward-btn">
+                    <i className="fa fa-chevron-right"></i>
+                  </div>
+                </div>
+                <div className="active-directory">
+                  Home
+                </div>
+            </div>
+            <div className="topbar-end">
+              <div className="search-btn">
+                <i className="fa fa-search"></i>
+              </div>
+            </div>
+        </div>
+        <div className="finder-content">
+          This app is currently under development, <br />please feel free to try the other apps!
+        </div>
+      </div>
     </div>
   );
 };
