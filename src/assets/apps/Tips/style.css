@@ -1,0 +1,99 @@
+.tips {
+    display: flex;
+    padding: 0.25rem;
+}
+
+.tip-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.tip-panel-close {
+    color: #fff;
+    width: fit-content;
+    position: absolute;
+    left: 1.25rem;
+    top: 4.25rem;
+    z-index: 100;
+    transition: 0.1s;
+    padding: 0.3rem 0.75rem;
+    border-radius: 0.9rem;
+    background-color: #ffffff2f;
+}
+
+.tip-panel-close:hover {
+    background-color:blue;
+}
+
+.tip-content {
+    z-index: 1;
+    margin-top: 3rem;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    border-radius: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tip-content img {
+    border-radius: 0.9rem;
+}
+
+
+.tip {
+    display: flex;
+    flex-direction: column;
+    transition: 0.1s;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-radius: 0.9rem;
+    width: 30%;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+}
+
+.tip:hover {
+    background-color: rgba(128, 128, 128, 0.493);
+    border: 1px solid #8d8d8d;
+}
+
+.tip-heading {
+    text-align: left;
+    width: 100%;
+    font-weight: BOLD;
+    margin: 0.1rem 0;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+}
+
+
+
+.tip-image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.tip-image img {
+    border-radius: 0.9rem;
+}
+
+.tip-panel .tip-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.tip-highlight {
+    background-color: #ffffff44;
+    width: fit-content;
+    padding: 0 0.5rem;
+    border-radius: 0.9rem;
+    margin: 0 auto;
+}

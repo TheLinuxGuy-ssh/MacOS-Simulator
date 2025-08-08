@@ -58,5 +58,21 @@
       "Name": "Files",
       "UID": 2000
     }
+  ],
+  "tips": [
+    {
+      "uid": "10000",
+      "Title": "The New Launcher!",
+      "Image": "/spotlight.png",
+      "Desc": "Easily launch and navigate on your workspace",
+      "Description": "Access the New launcher with <div className='tip-highlight'>Ctrl+Alt+Space</div>"
+    },
+    {
+      "uid": "10001",
+      "Title": "A Lock Screen!",
+      "Image": "/lock.png",
+      "Desc": "A Lock screen for your simulator!",
+      "Description": "A lock screen like MacOS, for the Simulator! <div className='tip-highlight'>Ctrl+Alt+L</div>"
+    }
   ]
 }
