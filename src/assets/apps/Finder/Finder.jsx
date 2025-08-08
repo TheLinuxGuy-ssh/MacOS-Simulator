@@ -23,7 +23,7 @@ const Finder = () => {
       <div className="finder-main">
         <div className="finder-topbar">
           <div className="topbar-start">
-            <div className="dual-back-forward">
+            <div className="dual-back-forward topbar-item">
               <div className="back-btn">
                 <i className="fa fa-chevron-left"></i>
               </div>
@@ -32,17 +32,34 @@ const Finder = () => {
                 <i className="fa fa-chevron-right"></i>
               </div>
             </div>
-            <div className="active-directory">Home</div>
+            <div className="active-directory topbar-item">Home</div>
           </div>
           <div className="topbar-end">
-            <div className="search-btn">
+            <div className="search-btn topbar-item">
               <i className="fa fa-search"></i>
             </div>
           </div>
         </div>
+        This app is currently under development. 
         <div className="finder-content">
-          This app is currently under development, <br />
-          please feel free to try the other apps!
+          <div className="content-item">
+            <img src="/Applications_Folder.png" alt="" />
+            <span className="content-item-title">
+              Applications
+            </span>
+          </div>
+          <div className="content-item">
+            <img src="/Folder.png" alt="" />
+            <span className="content-item-title">
+              Documents
+            </span>
+          </div>
+          <div className="content-item">
+            <img src="/Folder.png" alt="" />
+            <span className="content-item-title">
+              Downloads
+            </span>
+          </div>
         </div>
       </div>
     </div>
