@@ -3,11 +3,12 @@
     height: 400px;
     border-radius: 1.85rem;
     position: relative;
-    transition: 0.3s all;
+
     color: #fff;
     overflow: hidden;
     padding: 0.2rem;
     display:block;
+
 }
 .popup.AboutSys {
     width: 350px;

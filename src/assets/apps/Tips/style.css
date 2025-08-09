@@ -1,6 +1,18 @@
+.Tips {
+    width: 50rem !important;
+}
+
+.Tips .window-content {
+    overflow: auto !important;
+}
+
 .tips {
-    display: flex;
-    padding: 0.25rem;
+    display: grid;
+grid-template-columns: repeat(4, 22.925%);
+padding-bottom: 1.5rem;
+grid-column-gap: 1rem;
+grid-row-gap: 0px;
+height: fit-content;
 }
 
 .tip-panel {
@@ -31,7 +43,6 @@
 
 .tip-content {
     z-index: 1;
-    margin-top: 3rem;
     padding: 1rem 4rem;
     position: relative;
     border-radius: 1.8rem;
@@ -55,7 +66,7 @@
     align-items: center;
     padding: 0.5rem 0;
     border-radius: 0.9rem;
-    width: 30%;
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid transparent;
 }
