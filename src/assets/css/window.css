@@ -43,11 +43,12 @@
 }
 
 .window-content {
-    margin-top: 2.8rem;
-    height: 100%;
+    margin-top: 7.5%;
+    height: 90%;
     width: 100%;
     overflow: hidden;
     display: block;
+    position: relative;
 }
 
 .window-btn {
