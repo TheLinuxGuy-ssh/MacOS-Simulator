@@ -73,6 +73,13 @@
       "Image": "/lock.png",
       "Desc": "A Lock screen for your simulator!",
       "Description": "A lock screen like MacOS, for the Simulator! <div className='tip-highlight'>Ctrl+Alt+L</div>"
+    },
+    {
+      "uid": "10002",
+      "Title": "An upcoming Powerful Terminal",
+      "Image": "/terminal-tip.png",
+      "Desc": "Manage your Simulator with the new terminal app",
+      "Description": "A terminal app which helps you run the simulator with a cli!! <br> <center>Launch it from the dock or Use the Keybind below!</center> <div className='tip-highlight'>Ctrl+Alt+T</div>"
     }
   ]
 }

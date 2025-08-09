@@ -12,6 +12,7 @@ const Keybinds = ({ onOpen, handleLaunch }) => {
   useHotkeys('ctrl+alt+t, cmd+alt+t', ( ) => {
     onOpen(2);
   });
+
   useHotkeys('ctrl+alt+space, cmd+alt+space', ( ) => {
     handleLaunch(true)
   });

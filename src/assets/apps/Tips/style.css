@@ -33,16 +33,18 @@
     z-index: 1;
     margin-top: 3rem;
     padding: 1rem 4rem;
-    height: 5rem;
     position: relative;
     border-radius: 1.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .tip-content img {
     border-radius: 0.9rem;
+    aspect-ratio:initial;
+    height: 12rem;
 }
 
 
