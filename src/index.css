@@ -62,11 +62,13 @@ button:focus-visible {
 }
 
 ::-webkit-scrollbar {
-  width: 7.5px;
+  width: 0.4rem;
 }
 
 ::-webkit-scrollbar-thumb {
   border: 5px;
+  background-color: #ffffff33;
+  border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-button {
