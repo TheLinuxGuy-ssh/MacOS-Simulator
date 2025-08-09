@@ -32,8 +32,8 @@
 .tip-content {
     z-index: 1;
     margin-top: 3rem;
-    padding: 1rem;
-    width: 100%;
+    padding: 1rem 4rem;
+    height: 5rem;
     position: relative;
     border-radius: 1.8rem;
     display: flex;

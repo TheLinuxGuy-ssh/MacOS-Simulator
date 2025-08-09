@@ -3,6 +3,7 @@
     left: 50%;
     transform: translateX(-50%);
     top: 30%;
+    z-index: 100;
 }
 .launcher .launcher-search-box .fa-search {
     padding: 1rem;
