@@ -9,9 +9,9 @@ const App = () => {
   return (
     <>
       <Routes>
-            <Route path="*" Component={comp.Splash} />
-                    <Route path="/desktop" Component={Desktop} />
-                    <Route path="/" Component={comp.Lock} />
+            <Route path="*" element={<comp.Splash />} />
+                    <Route path="/desktop" element={<Desktop />} />
+                    <Route path="/" element={<comp.Lock />} />
                 </Routes>
     </>
   );
