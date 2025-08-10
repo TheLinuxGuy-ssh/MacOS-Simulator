@@ -68,7 +68,7 @@
     {
       "uid": "10003",
       "Title": "Applauncher Shorcut",
-      "Image": "/spotlight.png",
+      "Image": "/AppLauncher-Tip.png",
       "Desc": "Your apps at your fingertips!",
       "Description": "Access the New App launcher from the dock or the keybind below! <div className='tip-highlight'>F4</div>"
     },
