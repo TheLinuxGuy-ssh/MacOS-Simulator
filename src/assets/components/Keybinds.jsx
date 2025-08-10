@@ -9,7 +9,7 @@ const Keybinds = ({ onOpen, handleLaunch }) => {
     useHotkeys('ctrl+alt+l, cmd+alt+l', () => {
     navigate('/');
   });
-  useHotkeys('ctrl+alt+t, cmd+alt+t', ( ) => {
+  useHotkeys('ctrl+alt+t, cmd+alt+t', () => {
     onOpen(2);
   });
 
