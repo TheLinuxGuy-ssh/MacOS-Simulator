@@ -40,11 +40,16 @@
     },
     {
       "uid": 4,
+      "Name": "VisualStudioCode",
+      "Icon": "./VisualStudioCode.png"
+    },
+    {
+      "uid": 5,
       "Name": "Calculator",
       "Icon": "./calculator.png"  
     },
     {
-      "uid": 5,
+      "uid": 6,
       "Name": "Tips",
       "Icon": "./Tips.png"
     }

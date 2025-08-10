@@ -1,0 +1,24 @@
+.VisualStudioCode.window {
+    width: 70rem;
+    height: 40rem;
+    background-color: hsl(220 10% 20%);
+}
+
+.VisualStudioCode .liquidGlass.liquidGlass-tint {
+    display: none;
+}
+
+.VisualStudioCode .window-content {
+    margin-top: 3rem !important;
+    height: 92.5%;
+}
+
+.VisualStudioCode .window-topbar {
+    
+}
+
+
+.vscode {
+    width: 100%;
+    height: 100%;
+}
