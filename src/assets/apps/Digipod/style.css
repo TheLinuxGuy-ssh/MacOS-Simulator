@@ -1,0 +1,22 @@
+.Digipod.window {
+    width: 60rem;
+    height: 35rem;
+    background-color: oklch(21% .034 264.665)
+}
+
+.Digipod .liquidGlass.liquidGlass-tint {
+    display: none;
+}
+
+.Digipod .window-content {
+    margin-top: 3rem !important;
+    height: 92.5%;
+}
+
+.Digipod .window-topbar {
+    
+}
+.digipod {
+    width: 100%;
+    height: 100%;
+}

@@ -50,6 +50,11 @@
     },
     {
       "uid": 6,
+      "Name": "Digipod",
+      "Icon": "./Digipod.png"  
+    },
+    {
+      "uid": 7,
       "Name": "Tips",
       "Icon": "./Tips.png"
     }
