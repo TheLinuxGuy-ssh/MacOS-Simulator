@@ -1,5 +1,5 @@
 .Tips {
-    width: 50rem !important;
+    width: 50rem;
 }
 
 .Tips .window-content {
@@ -28,11 +28,11 @@ height: fit-content;
     color: #fff;
     width: fit-content;
     position: absolute;
-    left: 1.25rem;
-    top: 4.25rem;
+    left: 1rem;
+    top: 1rem;
     z-index: 100;
     transition: 0.1s;
-    padding: 0.3rem 0.75rem;
+    padding: 0.6rem 1.05rem;
     border-radius: 0.9rem;
     background-color: #ffffff2f;
 }
