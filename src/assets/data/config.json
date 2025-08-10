@@ -66,6 +66,13 @@
   ],
   "tips": [
     {
+      "uid": "10004",
+      "Title": "VSCode in browser!",
+      "Image": "/VisualStudioCode-Tip.png",
+      "Desc": "A fully functional code editor!",
+      "Description": "Featuring a new code editor, currently in <b>BETA</b> release. Just like VSCode! You won't know the Difference!  <div className='tip-highlight'>CTRL+ALT+V</div>"
+    },
+    {
       "uid": "10003",
       "Title": "Applauncher Shorcut",
       "Image": "/AppLauncher-Tip.png",

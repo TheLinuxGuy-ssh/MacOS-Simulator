@@ -12,6 +12,9 @@ const Keybinds = ({ onOpen, handleLaunch, handleLauncher }) => {
   useHotkeys('ctrl+alt+t, cmd+alt+t', () => {
     onOpen(2);
   });
+  useHotkeys('ctrl+alt+v, cmd+alt+v', () => {
+    onOpen(4);
+  });
   useHotkeys('F4', () => {
     handleLauncher(true)
   });
