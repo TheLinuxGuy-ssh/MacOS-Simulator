@@ -66,6 +66,13 @@
   ],
   "tips": [
     {
+      "uid": "10003",
+      "Title": "Applauncher Shorcut",
+      "Image": "/spotlight.png",
+      "Desc": "Your apps at your fingertips!",
+      "Description": "Access the New App launcher from the dock or the keybind below! <div className='tip-highlight'>F4</div>"
+    },
+    {
       "uid": "10000",
       "Title": "The New Launcher!",
       "Image": "/spotlight.png",

@@ -104,7 +104,7 @@ const Workspace = () => {
   return (
     <>
     <div className="spotlight" onClick={() => setLauncher(false)}>
-      <comp.Keybinds handleLaunch={setLauncher} onOpen={handleRestore} />
+      <comp.Keybinds handleLauncher={handleLauncher} handleLaunch={setLauncher} onOpen={handleRestore} />
       <comp.Topbar
         focused={focusedApp}
         onClose={() => handleClose(focusedApp.uid)}
