@@ -88,21 +88,15 @@ const Topbar = ({ focused, onClose, onOpen }) => {
           >
             <DropItem onClick={() => handleOpen(1000)}>About This Mac</DropItem>
             <DropSeparator />
-            <DropItem>System Preferences...</DropItem>
-            <DropItem>Location</DropItem>
-            <DropItem>App Store...</DropItem>
-            <DropSeparator />
-            <DropItem>Sleep</DropItem>
             <DropItem onClick={handleRefresh}>Restart</DropItem>
-            <DropItem>Shutdown</DropItem>
           </Drop>
           <Drop
             title={focused ? focused.Name : "Finder"}
             className="topbar-btn topbar-app"
           >
-            <DropItem onClick={() => handleOpen(focused)}>
+            {/* <DropItem onClick={() => handleOpen(1001)}>
               About {focused ? focused.Name : "Finder"}
-            </DropItem>
+            </DropItem> */}
             {focused ? (
               <DropItem onClick={() => handleClose(focused)}>Quit</DropItem>
             ) : (

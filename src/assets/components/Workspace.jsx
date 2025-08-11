@@ -150,7 +150,7 @@ const Workspace = () => {
               bringToFront={bringToFront}
               onClose={() => handleClose(popup.uid)}
             >
-              <PopupComponent />
+              <PopupComponent  />
             </comp.Window>
           ) : null;
         })}

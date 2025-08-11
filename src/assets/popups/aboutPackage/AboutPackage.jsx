@@ -1,5 +1,10 @@
-const AboutPackage = () => {
-  return <>this is your package, beep beep boop boop</>;
+import config from "../../data/config"
+
+const AboutPackage = ({AboutApp}) => {
+  return <>
+      <div className="aboutPackage">
+      </div>
+  </>;
 };
 
 export default AboutPackage;
