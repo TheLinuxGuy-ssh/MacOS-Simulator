@@ -107,9 +107,10 @@ const Workspace = () => {
     <div className="spotlight" onClick={() => setLauncher(false)}>
       <comp.Keybinds handleLauncher={handleLauncher} handleLaunch={setLauncher} onOpen={handleRestore} />
       <comp.Topbar
+        handleLaunch={setLauncher}
         focused={focusedApp}
         onClose={() => handleClose(focusedApp.uid)}
-        onOpen={handleRestore}
+        onOpen={handleRestore} 
       />
       <div className="workspace">
         {apps.map((app) => {
