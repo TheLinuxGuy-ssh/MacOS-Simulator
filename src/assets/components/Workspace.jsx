@@ -73,6 +73,7 @@ const Workspace = () => {
   };
   const handleRestore = (uid) => [
     setFocusUid(uid),
+    bringToFront(uid),
     setWindowStates((ws) => ({
       ...ws,
       [uid]: { ...ws[uid], open: true, minimized: false },
