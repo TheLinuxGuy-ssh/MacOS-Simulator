@@ -113,11 +113,18 @@ height: fit-content;
 }
 
 .tip-latest {
-    width: 30%;
+    width: 58%;
     flex-direction: row;
+    margin: 0 auto;
 }
+
+.tip-latest .tip-content {
+    padding: 0;
+    margin: 0 1rem;
+    width: 175%;
+}
+
 .tip-latest img{
-    height: 11rem;
-    aspect-ratio: 39/1;
+    height: 100%;
     width: 100%;
 }

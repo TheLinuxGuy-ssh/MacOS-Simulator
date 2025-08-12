@@ -30,7 +30,19 @@ const Tips = () => {
     const first = true;
     return (
         <>
-
+        {config.tips.map((tip, index) =>  index ==0 ? (
+                <div className={`tip ${index == 0 ? 'tip-latest' : ''}`} onClick={() => handleTip(tip.uid)}>
+                    <div className="tip-image" on>
+                        <img src={tip.Image} style={{ width: "100%" }} alt="" />
+                    </div>
+                    <div className="tip-content">
+                    <div className="tip-heading">{tip.Title}</div>
+                    <div className="tip-description">{tip.Desc}</div>
+                    </div>
+                </div>
+                
+            ) : null
+            )}
         <div className="tips">
             {config.tips.map((tip) => (
                 tipStates[tip.uid]?.open ? (
@@ -49,8 +61,8 @@ const Tips = () => {
                     </div>
                 ) : null
             ))}
-            {config.tips.map((tip, index) =>  (
-                <div className={`tip `} onClick={() => handleTip(tip.uid)}>
+            {config.tips.map((tip, index) =>  index !=0 ? (
+                <div className={`tip ${index == 0 ? 'tip-latest' : ''}`} onClick={() => handleTip(tip.uid)}>
                     <div className="tip-image" on>
                         <img src={tip.Image} style={{ width: "100%" }} alt="" />
                     </div>
@@ -58,7 +70,7 @@ const Tips = () => {
                     <div className="tip-description">{tip.Desc}</div>
                 </div>
                 
-            ) 
+            ) : null
             )}
         </div>
         </>
