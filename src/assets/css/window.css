@@ -108,6 +108,7 @@
     height: calc(100% - 5px) !important;
     top: 0 !important;
     left: 0 !important;
+    resize: none;
 }
 .app-maximized .liquidGlass-effect .app-maximized .liquidGlass-tint .app-maximized .liquidGlass-shine {
     display: none !important;
