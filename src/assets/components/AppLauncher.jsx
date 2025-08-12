@@ -16,7 +16,8 @@ const AppLauncher = ({ state, onOpen, handleLauncher }) => {
       >
         <LiquidGlass />
         <div className="launcher-content">
-          {apps.map((item, index) => (
+          {
+          apps.map((item, index) => (
             <div key={item.uid} className="app">
               <img
                 src={item.Icon}

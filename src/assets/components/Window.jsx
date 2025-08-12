@@ -50,34 +50,55 @@ const useDraggable = ({ onDrag = id } = {}) => {
   }, []);
 
   useEffect(() => {
-    if (!pressed) return;
-    const handleMouseMove = throttle((event) => {
-      if (!windowRef.current || !position.current) return;
-      const pos = position.current;
-      const elem = windowRef.current;
-      position.current = onDrag({
-        x: pos.x + event.movementX,
-        y: pos.y + event.movementY,
-      });
-      elem.style.left = `${pos.x}px`;
-      elem.style.top = `${pos.y}px`;
+  if (!pressed) return;
+
+  let lastX = null;
+  let lastY = null;
+
+  const handleMouseMove = throttle((event) => {
+    if (!windowRef.current || !position.current) return;
+
+    if (lastX === null || lastY === null) {
+      lastX = event.clientX;
+      lastY = event.clientY;
+      return;
+    }
+
+    const deltaX = event.clientX - lastX;
+    const deltaY = event.clientY - lastY;
+    lastX = event.clientX;
+    lastY = event.clientY;
+
+    const pos = position.current;
+    const newPos = onDrag({
+      x: pos.x + deltaX,
+      y: pos.y + deltaY,
     });
+    position.current = newPos;
+    const elem = windowRef.current;
+    elem.style.left = `${newPos.x}px`;
+    elem.style.top = `${newPos.y}px`;
+  });
 
-    const handleMouseUp = () => {
-      document.body.style.userSelect = "";
-      const ele = windowRef.current;
-      ele.classList.remove("pressed");
-      setPressed(false);
-    };
+  const handleMouseUp = () => {
+    lastX = null;
+    lastY = null;
+    document.body.style.userSelect = "";
+    const ele = windowRef.current;
+    ele.classList.remove("pressed");
+    setPressed(false);
+  };
 
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
-    return () => {
-      handleMouseMove.cancel();
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
-    };
-  }, [pressed, onDrag]);
+  document.addEventListener("mousemove", handleMouseMove);
+  document.addEventListener("mouseup", handleMouseUp);
+
+  return () => {
+    handleMouseMove.cancel();
+    document.removeEventListener("mousemove", handleMouseMove);
+    document.removeEventListener("mouseup", handleMouseUp);
+  };
+}, [pressed, onDrag]);
+
 
   return [windowRef, handleRef, pressed];
 };
