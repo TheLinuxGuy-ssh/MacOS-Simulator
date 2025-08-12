@@ -49,14 +49,8 @@ const Workspace = () => {
   const handleMinimize = (uid) => {
     setWindowStates((ws) => ({
       ...ws,
-      [uid]: { ...ws[uid], isminimizing: true },
+      [uid]: { ...ws[uid], isminimizing: true, minimized: true },
     }));
-    setTimeout(() => {
-      setWindowStates((ws) => ({
-        ...ws,
-        [uid]: { ...ws[uid], minimized: true, isminimizing: false },
-      }));
-    }, 500);
   };
   const handleMaximize = (uid) => {
     if (windowStates[uid].maximized) {
@@ -76,8 +70,14 @@ const Workspace = () => {
     bringToFront(uid),
     setWindowStates((ws) => ({
       ...ws,
-      [uid]: { ...ws[uid], open: true, minimized: false },
+      [uid]: { ...ws[uid], open: true, isminimizing: true, minimized: false, },
     })),
+    setTimeout(() => {
+      setWindowStates((ws) => ({
+        ...ws,
+        [uid]: { ...ws[uid], isminimizing: false },
+      }));
+    }, 500),
     launcherState ? handleLauncher() : null,
   ];
 

@@ -114,12 +114,11 @@
 }
 
 .app-minimising {
-    top: 100% !important;
-    transform: scale(0.2);
         transition: 0.3s;
 }
 
 .app-hidden {
+    transition: 0.3s;
     top: 100% !important;
     transform: scale(0.2);
 }
