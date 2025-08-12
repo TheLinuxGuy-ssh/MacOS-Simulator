@@ -1,6 +1,10 @@
 .window.Calculator {
-    width: max-content;
-    height: max-content;
+    width: 15rem;
+    height: 28rem;
+    min-width: 15rem;
+    min-height: 28rem;
+    max-width: 15rem;
+    max-height: 28rem;
     padding: 1em;
     background-color: #2a2928;
 } 
