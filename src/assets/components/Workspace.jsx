@@ -29,7 +29,7 @@ const Workspace = () => {
       ])
     )
   );
-  const [ launcher, setLauncher ] = useState(false);
+  const [launcher, setLauncher] = useState(false);
   const [launcherState, setLauncherState] = useState(false);
   const [focusedUid, setFocusUid] = useState(null);
   const apps = config.app;
@@ -70,7 +70,7 @@ const Workspace = () => {
     bringToFront(uid),
     setWindowStates((ws) => ({
       ...ws,
-      [uid]: { ...ws[uid], open: true, isminimizing: true, minimized: false, },
+      [uid]: { ...ws[uid], open: true, isminimizing: true, minimized: false },
     })),
     setTimeout(() => {
       setWindowStates((ws) => ({
@@ -104,64 +104,68 @@ const Workspace = () => {
 
   return (
     <>
-    <div className="spotlight" onClick={() => setLauncher(false)}>
-      <comp.Keybinds handleLauncher={handleLauncher} handleLaunch={setLauncher} onOpen={handleRestore} />
-      <comp.Topbar
-        handleLaunch={setLauncher}
-        focused={focusedApp}
-        onClose={() => handleClose(focusedApp.uid)}
-        onOpen={handleRestore} 
-      />
-      <div className="workspace">
-        {apps.map((app) => {
-          const AppComponent =
-            componentMap[app.Name] ||
-            (() => <div>Unknown App: {app.Name}</div>);
-          return windowStates[app.uid]?.open ? (
-            <comp.Window
-              key={app.uid}
-              uid={app.uid}
-              zIndex={zIndexes[app.uid] || 1}
-              bringToFront={bringToFront}
-              appMeta={app}
-              type="app"
-              className={`${ 
-                windowStates[app.uid]?.minimized ? "app-hidden " : " "
-              } ${
-                windowStates[app.uid]?.isminimizing ? "app-minimising" : ""
-              } ${windowStates[app.uid]?.maximized ? "app-maximized" : ""}
+      <div className="spotlight" onClick={() => setLauncher(false)}>
+        <comp.Keybinds
+          handleLauncher={handleLauncher}
+          handleLaunch={setLauncher}
+          onOpen={handleRestore}
+        />
+        <comp.Topbar
+          handleLaunch={setLauncher}
+          focused={focusedApp}
+          onClose={() => handleClose(focusedApp.uid)}
+          onOpen={handleRestore}
+        />
+        <div className="workspace">
+          {apps.map((app) => {
+            const AppComponent =
+              componentMap[app.Name] ||
+              (() => <div>Unknown App: {app.Name}</div>);
+            return windowStates[app.uid]?.open ? (
+              <comp.Window
+                key={app.uid}
+                uid={app.uid}
+                zIndex={zIndexes[app.uid] || 1}
+                bringToFront={bringToFront}
+                appMeta={app}
+                type="app"
+                className={`${
+                  windowStates[app.uid]?.minimized ? "app-hidden " : " "
+                } ${
+                  windowStates[app.uid]?.isminimizing ? "app-minimising" : ""
+                } ${windowStates[app.uid]?.maximized ? "app-maximized" : ""}
               ${app.Name}`}
-              onClose={() => handleClose(app.uid)}
-              onMinimize={() => handleMinimize(app.uid)}
-              onMaximize={() => handleMaximize(app.uid)}
-            >
-              <AppComponent />
-            </comp.Window>
-          ) : null;
-        })}
-        {popups.map((popup) => {
-          const PopupComponent = componentPopup[popup.Name];
-          return windowStates[popup.uid]?.open ? (
-            <comp.Window
-              key={popup.uid}
-              type="popup"
-              className={`${popup.Name}`}
-              uid={popup.uid}
-              zIndex={zIndexes[popup.uid] || 1}
-              bringToFront={bringToFront}
-              onClose={() => handleClose(popup.uid)}
-            >
-              <PopupComponent  />
-            </comp.Window>
-          ) : null;
-        })}
-      </div>
-      <comp.Dock
-        windowStates={windowStates}
-        onOpen={handleRestore}
-        bringToFront={bringToFront}
-        handleLauncher={handleLauncher}
-      />
+                onClose={() => handleClose(app.uid)}
+                onMinimize={() => handleMinimize(app.uid)}
+                onMaximize={() => handleMaximize(app.uid)}
+              >
+                <AppComponent />
+              </comp.Window>
+            ) : null;
+          })}
+          {popups.map((popup) => {
+            const PopupComponent = componentPopup[popup.Name];
+            return windowStates[popup.uid]?.open ? (
+              <comp.Window
+                key={popup.uid}
+                type="popup"
+                className={`${popup.Name}`}
+                uid={popup.uid}
+                zIndex={zIndexes[popup.uid] || 1}
+                bringToFront={bringToFront}
+                onClose={() => handleClose(popup.uid)}
+              >
+                <PopupComponent />
+              </comp.Window>
+            ) : null;
+          })}
+        </div>
+        <comp.Dock
+          windowStates={windowStates}
+          onOpen={handleRestore}
+          bringToFront={bringToFront}
+          handleLauncher={handleLauncher}
+        />
       </div>
       com
       <comp.AppLauncher

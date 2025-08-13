@@ -1,6 +1,5 @@
 import "../css/liquidglass.css";
 
-
 const LiquidGlass = () => {
   return (
     <>

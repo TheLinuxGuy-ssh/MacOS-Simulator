@@ -2,9 +2,7 @@ import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
 import { useState } from "react";
 import Config from "../data/config";
 import { DropItem, DropSeparator, Drop } from "../components/Drop";
-import {
-  useNavigate
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
   const navigate = useNavigate();
@@ -33,7 +31,7 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
   const handleOpen = (uid) => {
     onOpen(uid);
   };
-  
+
   return (
     <>
       <div className="topbar">
@@ -95,24 +93,21 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
             <DropSeparator />
             <DropItem onClick={handleRefresh}>Restart</DropItem>
           </Drop>
-            {/* <DropItem onClick={() => handleOpen(1001)}>
+          {/* <DropItem onClick={() => handleOpen(1001)}>
               About {focused ? focused.Name : "Finder"}
             </DropItem> */}
-            {focused ? (
-              <Drop
-            title={focused ? focused.Name : "Finder"}
-            className="topbar-btn topbar-app"
-          >
+          {focused ? (
+            <Drop
+              title={focused ? focused.Name : "Finder"}
+              className="topbar-btn topbar-app"
+            >
               <DropItem onClick={() => handleClose(focused)}>Quit</DropItem>
-              </Drop>
-            ) : (
-              <div className="topbar-btn topbar-app">
-             Finder
-          </div>
-            )}
+            </Drop>
+          ) : (
+            <div className="topbar-btn topbar-app">Finder</div>
+          )}
         </div>
         <div className="topbar-right">
-
           <div className="topbar-btn clock">{ctime}</div>
         </div>
       </div>

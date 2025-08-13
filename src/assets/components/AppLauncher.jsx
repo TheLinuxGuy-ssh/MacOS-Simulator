@@ -3,7 +3,6 @@ import "../css/applauncher.css";
 import { LiquidGlass } from ".";
 
 const AppLauncher = ({ state, onOpen, handleLauncher }) => {
-
   const apps = appsConfig.app;
   const handleRestore = (uid) => {
     onOpen(uid);
@@ -16,8 +15,7 @@ const AppLauncher = ({ state, onOpen, handleLauncher }) => {
       >
         <LiquidGlass />
         <div className="launcher-content">
-          {
-          apps.map((item, index) => (
+          {apps.map((item, index) => (
             <div key={item.uid} className="app">
               <img
                 src={item.Icon}
@@ -30,10 +28,7 @@ const AppLauncher = ({ state, onOpen, handleLauncher }) => {
         </div>
       </div>
     </>
-
-
-
   );
 };
 
-export default AppLauncher
+export default AppLauncher;

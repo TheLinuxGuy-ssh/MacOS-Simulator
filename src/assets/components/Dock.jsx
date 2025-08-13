@@ -76,13 +76,17 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
                 <LiquidGlass />
                 TheLinuxGuy
               </div>
-              <a className="ico" href="https://github.com/thelinuxguy-ssh" target="_blank">
-              <img
-                src="./profile.png"
-                onClick={handleLauncher}
-                className="w-full h-full rounded-full"
-                alt=""
-              />
+              <a
+                className="ico"
+                href="https://github.com/thelinuxguy-ssh"
+                target="_blank"
+              >
+                <img
+                  src="./profile.png"
+                  onClick={handleLauncher}
+                  className="w-full h-full rounded-full"
+                  alt=""
+                />
               </a>
             </li>
           </ul>

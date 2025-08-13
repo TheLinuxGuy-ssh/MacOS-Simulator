@@ -40,25 +40,19 @@ const Finder = () => {
             </div>
           </div>
         </div>
-        This app is currently under development. 
+        This app is currently under development.
         <div className="finder-content">
           <div className="content-item">
             <img src="/Applications_Folder.png" alt="" />
-            <span className="content-item-title">
-              Applications
-            </span>
+            <span className="content-item-title">Applications</span>
           </div>
           <div className="content-item">
             <img src="/Folder.png" alt="" />
-            <span className="content-item-title">
-              Documents
-            </span>
+            <span className="content-item-title">Documents</span>
           </div>
           <div className="content-item">
             <img src="/Folder.png" alt="" />
-            <span className="content-item-title">
-              Downloads
-            </span>
+            <span className="content-item-title">Downloads</span>
           </div>
         </div>
       </div>

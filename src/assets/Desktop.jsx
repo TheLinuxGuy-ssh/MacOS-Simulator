@@ -1,12 +1,12 @@
-import * as comp from "./components"
+import * as comp from "./components";
 
 const Desktop = () => {
-    return (
-        <>
-            <comp.Wallpaper />
-            <comp.Workspace />
-        </>
-    )
-}
+  return (
+    <>
+      <comp.Wallpaper />
+      <comp.Workspace />
+    </>
+  );
+};
 
-export default Desktop
+export default Desktop;

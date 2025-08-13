@@ -141,52 +141,51 @@ export function Calculator() {
           </div>
           <div className="digit-keys">
             <div className="flex-col">
-            {[9,8,7].map((n) => (
-              <CalculatorKey
-                key={n}
-                className={`calc-key key-${n}`}
-                onPress={() => inputDigit(n)}
-              >
-                {n}
-              </CalculatorKey>
-            ))}
+              {[9, 8, 7].map((n) => (
+                <CalculatorKey
+                  key={n}
+                  className={`calc-key key-${n}`}
+                  onPress={() => inputDigit(n)}
+                >
+                  {n}
+                </CalculatorKey>
+              ))}
             </div>
             <div className="flex-col">
-            {[6,5,4].map((n) => (
-              <CalculatorKey
-                key={n}
-                className={`calc-key key-${n}`}
-                onPress={() => inputDigit(n)}
-              >
-                {n}
-              </CalculatorKey>
-            ))}
+              {[6, 5, 4].map((n) => (
+                <CalculatorKey
+                  key={n}
+                  className={`calc-key key-${n}`}
+                  onPress={() => inputDigit(n)}
+                >
+                  {n}
+                </CalculatorKey>
+              ))}
             </div>
             <div className="flex-col">
-            {[3,2,1].map((n) => (
-              <CalculatorKey
-                key={n}
-                className={`calc-key key-${n}`}
-                onPress={() => inputDigit(n)}
-              >
-                {n}
-              </CalculatorKey>
-            ))}
+              {[3, 2, 1].map((n) => (
+                <CalculatorKey
+                  key={n}
+                  className={`calc-key key-${n}`}
+                  onPress={() => inputDigit(n)}
+                >
+                  {n}
+                </CalculatorKey>
+              ))}
             </div>
             <div className="flex-col">
-              
-            <CalculatorKey className="calc-key key-dot" onPress={inputDot}>
-              ●
-            </CalculatorKey>
-            {[0].map((n) => (
-              <CalculatorKey
-                key={n}
-                className={`calc-key key-${n}`}
-                onPress={() => inputDigit(n)}
-              >
-                {n}
+              <CalculatorKey className="calc-key key-dot" onPress={inputDot}>
+                ●
               </CalculatorKey>
-            ))}
+              {[0].map((n) => (
+                <CalculatorKey
+                  key={n}
+                  className={`calc-key key-${n}`}
+                  onPress={() => inputDigit(n)}
+                >
+                  {n}
+                </CalculatorKey>
+              ))}
             </div>
           </div>
         </div>

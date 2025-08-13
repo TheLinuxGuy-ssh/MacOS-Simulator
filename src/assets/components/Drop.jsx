@@ -28,7 +28,8 @@ const Drop = ({ title, children, color, size, variant, className }) => {
         </Button>
       </DropdownMenu.Trigger>
       <DropdownMenu.Content
-        className={`topbar-dropdown topbar-dropdown-${className}`}>
+        className={`topbar-dropdown topbar-dropdown-${className}`}
+      >
         <LiquidGlass />
         {children}
       </DropdownMenu.Content>

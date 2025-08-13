@@ -1,10 +1,11 @@
-import config from "../../data/config"
+import config from "../../data/config";
 
-const AboutPackage = ({AboutApp}) => {
-  return <>
-      <div className="aboutPackage">
-      </div>
-  </>;
+const AboutPackage = ({ AboutApp }) => {
+  return (
+    <>
+      <div className="aboutPackage"></div>
+    </>
+  );
 };
 
 export default AboutPackage;
