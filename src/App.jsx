@@ -7,11 +7,19 @@ import {
   Link,
   Navigate,
 } from "react-router-dom";
+import Lenis from "lenis";
+import 'lenis/dist/lenis.css'
 import * as comp from "./assets/components";
 
 const Desktop = lazy(() => import("./assets/Desktop"));
 
 const App = () => {
+    const lenis = new Lenis({
+  autoRaf: true,
+});
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
   return (
     <>
       <Routes>
