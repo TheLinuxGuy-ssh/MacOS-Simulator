@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
+    "production": "serve -s dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -25,6 +26,7 @@
     "react-resizable": "^3.0.5",
     "react-router-dom": "^7.7.1",
     "react-terminal": "^1.4.5",
+    "serve": "^14.2.4",
     "vite-jsconfig-paths": "^2.0.1"
   },
   "devDependencies": {
