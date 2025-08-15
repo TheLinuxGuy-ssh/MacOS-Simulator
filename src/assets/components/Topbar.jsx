@@ -37,9 +37,10 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
 
   return (
     <>
-    <div className="brightness" style={{ opacity: `${1-(brightness/100)}` }}>
-      
-    </div>
+      <div
+        className="brightness"
+        style={{ opacity: `${1 - brightness / 100}` }}
+      ></div>
       <div className="topbar">
         <div className="topbar-left">
           {/* <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]} /> */}
@@ -118,29 +119,32 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
             title={<img src="/ControlCentre.png" alt="" />}
             className="topbar-btn topbar-ico"
           >
-              <div>
-            <DropItem onClick={""}>
-              <div>
-                <div className="label">Display</div>
+            <div>
+              <DropItem onClick={""}>
                 <div>
-                  <Slider defaultValue={brightness} onChange={(value) => setBrightness(value)} className="sound-slider" />
+                  <div className="label">Display</div>
+                  <div>
+                    <Slider
+                      defaultValue={brightness}
+                      onChange={(value) => setBrightness(value)}
+                      className="sound-slider"
+                    />
+                  </div>
                 </div>
-              </div>
               </DropItem>
-            <DropItem onClick={''}>
-              <div>
-                <div className="label">Sound</div>
+              <DropItem onClick={""}>
                 <div>
-                  <Slider className="sound-slider" />
+                  <div className="label">Sound</div>
+                  <div>
+                    <Slider className="sound-slider" />
+                  </div>
                 </div>
-              </div>
               </DropItem>
-              </div>
+            </div>
           </Drop>
           <div className="topbar-btn clock">{ctime}</div>
         </div>
       </div>
-
     </>
   );
 };
