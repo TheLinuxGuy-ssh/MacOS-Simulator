@@ -139,7 +139,7 @@ const Workspace = () => {
                 onMinimize={() => handleMinimize(app.uid)}
                 onMaximize={() => handleMaximize(app.uid)}
               >
-                <AppComponent />
+                <AppComponent onAppOpen={handleRestore} />
               </comp.Window>
             ) : null;
           })}

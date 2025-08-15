@@ -1,12 +1,21 @@
 import { ReactTerminal } from "react-terminal";
 import "./style.css";
+import config from "../../data/config"
 
-const Terminal = () => {
+const Terminal = ({ onAppOpen }) => {
+  const handleOpen = (uid) => {
+      onAppOpen(uid)
+  }
+    const apps = 
+  Object.fromEntries(
+  config.app.map((app) => [app.Name, () => handleOpen(app.uid)])
+)
   const commands = {
     whoami: "root",
     cd: (directory) => `changed path to ${directory}`,
     ls: "bin\tboot\tdev\tetc\thome\tlib\tlib64\tmedia\tmnt\topt\tproc\troot\trun\tsbin\tsrv\tsys\ttmp\tusr\tvar",
     help: "whoami\ncd\nls\nclear\nhelp",
+    ...apps
   };
   return (
     <div className="Term">

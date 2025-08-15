@@ -3,6 +3,8 @@ import { useState } from "react";
 import Config from "../data/config";
 import { DropItem, DropSeparator, Drop } from "../components/Drop";
 import { useNavigate } from "react-router-dom";
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
 
 const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
   const navigate = useNavigate();
@@ -13,6 +15,7 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
   const handleRefresh = () => {
     navigate("/");
   };
+  const [brightness, setBrightness] = useState(100);
   let time = new Date().toLocaleTimeString();
   const formattedTime = time.replace(/,/g, "");
 
@@ -34,6 +37,9 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
 
   return (
     <>
+    <div className="brightness" style={{ opacity: `${1-(brightness/100)}` }}>
+      
+    </div>
       <div className="topbar">
         <div className="topbar-left">
           {/* <Drop className="apple" title={[ <img src="./apple-main.png" className="topbar-apple" alt="" /> ]} /> */}
@@ -108,9 +114,33 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
           )}
         </div>
         <div className="topbar-right">
+          <Drop
+            title={<img src="/ControlCentre.png" alt="" />}
+            className="topbar-btn topbar-ico"
+          >
+              <div>
+            <DropItem onClick={""}>
+              <div>
+                <div className="label">Display</div>
+                <div>
+                  <Slider defaultValue={brightness} onChange={(value) => setBrightness(value)} className="sound-slider" />
+                </div>
+              </div>
+              </DropItem>
+            <DropItem onClick={''}>
+              <div>
+                <div className="label">Sound</div>
+                <div>
+                  <Slider className="sound-slider" />
+                </div>
+              </div>
+              </DropItem>
+              </div>
+          </Drop>
           <div className="topbar-btn clock">{ctime}</div>
         </div>
       </div>
+
     </>
   );
 };

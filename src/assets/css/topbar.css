@@ -78,12 +78,28 @@
     background-color: transparent !important;
     color: #fff !important;
     padding: 0 !important;
-
-
 }
 
-.rt-BaseMenuViewport {
-    padding: 0.5rem 0.5rem;
+.brightness {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000000 !important;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    pointer-events: none;
+}
+div[data-radix-popper-content-wrapper] {
+    z-index: 0 !important;
+}
+
+.label {
+    font-weight: 500;
+}
+
+.sound-slider {
+    width: 15rem !important;
 }
 
 .rt-BaseMenuItem {
@@ -101,4 +117,13 @@
 }
 .rt-BaseMenuContent {
     box-shadow: none;
+}
+
+.topbar-ico {
+    padding: 0;
+}
+
+.topbar-ico img{
+    width: 100%;
+    height: 100%;
 }
