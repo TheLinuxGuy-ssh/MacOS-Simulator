@@ -98,8 +98,11 @@ button:focus-visible {
 }
 
 .wallpaper img {
+  position: fixed;
   width: 100%;
   height: 100%;
+  transition: 2s;
+  z-index: -10;
 }
 
 .workspace {

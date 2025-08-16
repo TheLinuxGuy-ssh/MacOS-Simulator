@@ -47,11 +47,12 @@ const Lock = () => {
   useState(() => {
     setInterval(UpdateTime);
   });
+  const dark = true;
 
   return (
     <>
       <Splash />
-      <Wallpaper />
+      <Wallpaper dark={dark} />
       <div className="lockscreen">
         <LiquidGlass />
         <div className="info">

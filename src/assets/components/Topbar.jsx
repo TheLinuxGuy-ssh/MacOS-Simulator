@@ -5,6 +5,7 @@ import { DropItem, DropSeparator, Drop } from "../components/Drop";
 import { useNavigate } from "react-router-dom";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import { LiquidGlass } from ".";
 
 const Topbar = ({ focused, onClose, onOpen, handleLaunch, dark, setDark }) => {
   const navigate = useNavigate();
@@ -46,9 +47,13 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch, dark, setDark }) => {
 
   const toggleMode = (status) => {
       if(status) {
-        setDark(false)
+        setDark(false);
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
       }else {
-        setDark(true)
+        setDark(true);
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
       }
   }
 
@@ -141,21 +146,21 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch, dark, setDark }) => {
           >
             <div>
               <div className="control-centre">
-                <DropItem className={'control-centre-btn'} onClick={() => toggleNight(night)('')}>
+                <DropItem className={`control-centre-item control-centre-btn`} onClick={() => toggleNight(night)('')}>
                   <div className={`control-btn-icon night-light-btn ${night && 'active'}`}>
                     <i className="fa fa-moon"></i>
                   </div>
                 Night Light
               </DropItem>
-              <DropItem className={'control-centre-btn'} onClick={() => toggleMode(dark)('')}>
+              <DropItem className={`control-centre-item control-centre-btn ${dark && 'active'}`} onClick={() => toggleMode(dark)('')}>
                 <div className={`control-btn-icon dark-mode-btn ${dark && 'active'}`}>
                     <img src="./dark-mode.svg" alt="" />
                   </div>
                 Dark Mode
               </DropItem>
               </div>
-              <DropItem className={'control-centre-spacing'} onClick={""}>
-                <div>
+              <DropItem className={'control-centre-item control-centre-spacing'} onClick={""}>
+                <div className="margin-center">
                   <div className="label">Display</div>
                   <div>
                     <Slider
@@ -166,8 +171,9 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch, dark, setDark }) => {
                   </div>
                 </div>
               </DropItem>
-              <DropItem className={'control-centre-spacing'} onClick={""}>
-                <div>
+              <DropItem className={'control-centre-item control-centre-spacing'} onClick={""}>
+                <LiquidGlass />
+                <div className="margin-center">
                   <div className="label">Sound</div>
                   <div>
                     <Slider className="sound-slider" />

@@ -9,7 +9,7 @@ const componentMap = Apps;
 const componentPopup = Popups;
 
 const Workspace = () => {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(true)
   const workspaceRef = useRef(null);
   const [windowStates, setWindowStates] = useState(
     Object.fromEntries(
@@ -105,6 +105,7 @@ const Workspace = () => {
 
   return (
     <>
+    <comp.Wallpaper dark={dark} />
       <div className="spotlight" onClick={() => setLauncher(false)}>
         <comp.Keybinds
           handleLauncher={handleLauncher}
