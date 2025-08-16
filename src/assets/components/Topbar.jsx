@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
-const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
+const Topbar = ({ focused, onClose, onOpen, handleLaunch, dark, setDark }) => {
   const navigate = useNavigate();
   const Topbar = Config.app.Options;
   const [night, setNight] = useState(false);
@@ -41,6 +41,14 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
         setNight(false)
       } else {
         setNight(true)
+      }
+  }
+
+  const toggleMode = (status) => {
+      if(status) {
+        setDark(false)
+      }else {
+        setDark(true)
       }
   }
 
@@ -139,7 +147,7 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
                   </div>
                 Night Light
               </DropItem>
-              <DropItem className={'control-centre-btn'} onClick={''}>
+              <DropItem className={'control-centre-btn'} onClick={() => toggleMode(dark)('')}>
                 <div className={`control-btn-icon dark-mode-btn ${night && 'active'}`}>
                     <img src="./dark-mode.svg" alt="" />
                   </div>
