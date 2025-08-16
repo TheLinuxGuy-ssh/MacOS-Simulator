@@ -148,13 +148,13 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch, dark, setDark }) => {
                 Night Light
               </DropItem>
               <DropItem className={'control-centre-btn'} onClick={() => toggleMode(dark)('')}>
-                <div className={`control-btn-icon dark-mode-btn ${night && 'active'}`}>
+                <div className={`control-btn-icon dark-mode-btn ${dark && 'active'}`}>
                     <img src="./dark-mode.svg" alt="" />
                   </div>
                 Dark Mode
               </DropItem>
               </div>
-              <DropItem onClick={""}>
+              <DropItem className={'control-centre-spacing'} onClick={""}>
                 <div>
                   <div className="label">Display</div>
                   <div>
@@ -166,7 +166,7 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch, dark, setDark }) => {
                   </div>
                 </div>
               </DropItem>
-              <DropItem onClick={""}>
+              <DropItem className={'control-centre-spacing'} onClick={""}>
                 <div>
                   <div className="label">Sound</div>
                   <div>

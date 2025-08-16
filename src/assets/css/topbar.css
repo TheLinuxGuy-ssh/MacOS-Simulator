@@ -167,12 +167,22 @@ div[data-radix-popper-content-wrapper] {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition: 0.5s;
 }
 
 .night-light-btn.active {
     background: rgba(212, 163, 0, 0.527) !important;
 }
 
-.dark-mode-btn {
+.dark-mode-btn img {
+    width: 80%;
+    height: 80%;
     filter: invert(1);
+}
+.dark-mode-btn.active {
+    background-color: darkblue !important;
+}
+
+.control-centre-spacing {
+    padding: 2rem 0 !important;
 }
