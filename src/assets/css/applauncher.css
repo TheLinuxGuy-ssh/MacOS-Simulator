@@ -32,9 +32,9 @@
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto;
     position: fixed;
-    width: 90%;
-    height: 90%;
-    margin: 5%;
+    width: 70%;
+    height: 80%;
+    margin: 5% 15% !important;
     justify-content:space-between;
 }
 

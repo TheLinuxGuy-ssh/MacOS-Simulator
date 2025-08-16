@@ -176,7 +176,7 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch, dark, setDark }) => {
                 <div className="margin-center">
                   <div className="label">Sound</div>
                   <div>
-                    <Slider className="sound-slider" />
+                    <Slider defaultValue={40} className="sound-slider" />
                   </div>
                 </div>
               </DropItem>
