@@ -9,6 +9,7 @@ import "rc-slider/assets/index.css";
 const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
   const navigate = useNavigate();
   const Topbar = Config.app.Options;
+  const [night, setNight] = useState(false);
   const handleClose = (uid) => {
     onClose(uid);
   };
@@ -35,8 +36,19 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
     onOpen(uid);
   };
 
+  const toggleNight = (status) => {
+      if(status){
+        setNight(false)
+      } else {
+        setNight(true)
+      }
+  }
+
   return (
     <>
+    <div className={`night-light ${night && "active"}`}>
+
+    </div>
       <div
         className="brightness"
         style={{ opacity: `${1 - brightness / 100}` }}
@@ -120,6 +132,20 @@ const Topbar = ({ focused, onClose, onOpen, handleLaunch }) => {
             className="topbar-btn topbar-ico"
           >
             <div>
+              <div className="control-centre">
+                <DropItem className={'control-centre-btn'} onClick={() => toggleNight(night)('')}>
+                  <div className={`control-btn-icon night-light-btn ${night && 'active'}`}>
+                    <i className="fa fa-moon"></i>
+                  </div>
+                Night Light
+              </DropItem>
+              <DropItem className={'control-centre-btn'} onClick={''}>
+                <div className={`control-btn-icon dark-mode-btn ${night && 'active'}`}>
+                    <img src="./dark-mode.svg" alt="" />
+                  </div>
+                Dark Mode
+              </DropItem>
+              </div>
               <DropItem onClick={""}>
                 <div>
                   <div className="label">Display</div>

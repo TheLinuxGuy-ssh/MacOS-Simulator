@@ -9,6 +9,7 @@ const componentMap = Apps;
 const componentPopup = Popups;
 
 const Workspace = () => {
+  const [dark, setDark] = useState(false)
   const workspaceRef = useRef(null);
   const [windowStates, setWindowStates] = useState(
     Object.fromEntries(
@@ -115,6 +116,8 @@ const Workspace = () => {
           focused={focusedApp}
           onClose={() => handleClose(focusedApp.uid)}
           onOpen={handleRestore}
+          dark={dark}
+          setDark = {setDark}
         />
         <div className="workspace">
           {apps.map((app) => {

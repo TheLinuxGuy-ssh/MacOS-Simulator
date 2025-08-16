@@ -90,6 +90,21 @@
     background-color: #000;
     pointer-events: none;
 }
+.night-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000 !important;
+    width: 100%;
+    height: 100%;
+    background-color: #ad9c00;
+    opacity: 0;
+    transition: 2s opacity;
+    pointer-events: none;
+}
+.night-light.active {
+    opacity: 0.2;
+}
 div[data-radix-popper-content-wrapper] {
     z-index: 0 !important;
 }
@@ -126,4 +141,38 @@ div[data-radix-popper-content-wrapper] {
 .topbar-ico img{
     width: 100%;
     height: 100%;
+}
+
+.control-centre {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.25rem;
+    gap: 0.5em;
+}
+.control-centre-btn {
+    width: 100% !important;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+      box-shadow: inset 2px 2px 2px 0 rgba(112, 112, 112, 0.5),
+    inset -1px -1px 1.5px 2px rgba(128, 127, 127, 0.5);
+    background: rgba(70, 70, 70, 0.322);
+    font-weight: 500;
+}
+.control-btn-icon {
+    width: 2em;
+    height: 2em;
+    background: rgba(156, 156, 156, 0.322);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.night-light-btn.active {
+    background: rgba(212, 163, 0, 0.527) !important;
+}
+
+.dark-mode-btn {
+    filter: invert(1);
 }
