@@ -27,7 +27,6 @@ body.light {
     inset -1px -1px 1.5px 2px rgba(201, 201, 201, 0.5);
   --app-liquid-glass-bg: rgba(216, 216, 216, 0.322);
 
-  background: url(./backgrounddark.png) no-repeat;
   background-size: 100%;
   --app-color-primary: hsl(211, 100%, 50%);
   --app-color-primary-hsl: 211, 100%, 50%;
@@ -102,7 +101,6 @@ body.light {
 body,
 body[data-theme='dark'] {
   /* // Primary */
-  background: url(./backgrounddark.png) no-repeat;
   background-size: cover;
 
   --app-liquid-glass-bg: rgba(70, 70, 70, 0.322);
