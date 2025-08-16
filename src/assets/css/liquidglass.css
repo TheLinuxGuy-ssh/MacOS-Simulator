@@ -24,7 +24,7 @@
   z-index: -2;
   position: absolute;
   inset: 0;
-  background: rgba(70, 70, 70, 0.322);
+     background: var(--app-liquid-glass-bg);
   border-radius: 1.8rem;
   backdrop-filter: blur(10px);
 }
@@ -36,7 +36,6 @@
 
   overflow: hidden;
 
-  box-shadow: inset 2px 2px 2px 0 rgba(112, 112, 112, 0.5),
-    inset -1px -1px 1.5px 2px rgba(128, 127, 127, 0.5);
+box-shadow: var(--app-liquid-glass-shadow);
   border-radius: 1.8rem;
 }

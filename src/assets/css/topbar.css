@@ -47,12 +47,14 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    box-shadow: none;
     text-align: center;
     transition: 0.1s;
 }
 
 .rt-BaseMenuSeparator {
-    background-color: #7c7c7c;
+    background-color: #fff;
+    opacity: 0.35;
 }
 
 .topbar-apple  {
@@ -71,7 +73,7 @@
 }
 
 .topbar-btn:hover, .topbar-btn[aria-expanded="true"] {
-    background-color: #5f5f5f5b;
+    background: var(--app-liquid-glass-bg);
 }
 
 .topbar-dropdown {
@@ -159,9 +161,8 @@ div[data-radix-popper-content-wrapper] {
     padding: 2rem 1rem;
     display: flex;
     justify-content: center;
-      box-shadow: inset 2px 2px 2px 0 rgba(112, 112, 112, 0.5),
-    inset -1px -1px 1.5px 2px rgba(128, 127, 127, 0.5);
-    background: rgba(70, 70, 70, 0.322);
+    box-shadow: var(--app-liquid-glass-shadow);
+    background: var(--app-liquid-glass-bg);
     font-weight: 500;
     backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -189,18 +190,19 @@ div[data-radix-popper-content-wrapper] {
 }
 
 .control-centre-btn.active {
-    background-color: darkblue !important;
+    background-color: #ffffff !important;
+    color: #000;
 }
 
 .dark-mode-btn.active {
     transform: rotate(180deg);
+    filter: invert(1);
 }
 
 .control-centre-spacing {
     padding: 2rem 1rem;
-          box-shadow: inset 2px 2px 2px 0 rgba(112, 112, 112, 0.5),
-    inset -1px -1px 1.5px 2px rgba(128, 127, 127, 0.5);
-    background: rgba(70, 70, 70, 0.322);
+          box-shadow: var(--app-liquid-glass-shadow);
+    background: var(--app-liquid-glass-bg);
       backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
     border-radius: 1.8rem !important;
