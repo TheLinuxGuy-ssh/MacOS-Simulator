@@ -1,4 +1,4 @@
-# MacOS Simulator
+# DarwinX
 
 An online experience of macOS at the cost of nothing but Internet packets (preferred mostly for 1920x1080 resolutions)
 
