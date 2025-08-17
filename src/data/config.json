@@ -76,6 +76,13 @@
   ],
   "tips": [
     {
+      "uid": "10005",
+      "Title": "Launch Application from CLI!",
+      "Image": "/AppLaunchTerm-Tip.gif",
+      "Desc": "Launch all your applications straight from CLI!",
+      "Description": "Your can now Launch all your application from cli terminal by executing the exact name of that application!  <div className='tip-highlight'>`Appname`</div>"
+    },
+    {
       "uid": "10004",
       "Title": "VSCode in browser!",
       "Image": "/VisualStudioCode-Tip.png",

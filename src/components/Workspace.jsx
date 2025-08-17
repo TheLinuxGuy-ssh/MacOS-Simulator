@@ -6,13 +6,15 @@ import * as Popups from "../popups";
 
 const Workspace = () => {
   const appComponent = Apps;
+  const appConfig = config.app;
   const popupComponent = Popups;
+  const popupConfig = config.popup;
   const [dark, setDark] = useState(true);
   const [launcher, setLauncher] = useState(false);
   const [launcherState, setLauncherState] = useState(false);
   const [focusedUid, setFocusUid] = useState(null);
-  const [apps, setApps] = useState(config.app);
-  const [popups, setPopups] = useState([]);
+  const [apps, setApps] = useState(appConfig);
+  const [popups, setPopups] = useState(popupConfig);
   const [zIndexes, setZIndexes] = useState({});
   const [maxZ, setMaxZ] = useState(1);
   const [windowStates, setWindowStates] = useState(
@@ -169,7 +171,6 @@ const Workspace = () => {
           handleLauncher={handleLauncher}
         />
       </div>
-      com
       <comp.AppLauncher
         state={launcherState}
         onOpen={handleLaunchRestore}
