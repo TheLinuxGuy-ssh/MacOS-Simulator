@@ -1,0 +1,10 @@
+.Chess {
+    min-height: 33rem !important;
+    max-height: 33rem;
+    min-width: 30rem !important;
+    max-width: 30rem;
+}
+
+.Chess .window-btn.minimise {
+    display: none !important;
+}

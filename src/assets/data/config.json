@@ -48,6 +48,11 @@
       "Name": "Calculator",
       "Icon": "./calculator.png"  
     },
+        {
+      "uid": 8,
+      "Name": "Chess",
+      "Icon": "./chess.png"
+    },
     {
       "uid": 6,
       "Name": "Digipod",
