@@ -1,4 +1,3 @@
-import "../css/launcher.css";
 import { useState } from "react";
 import {
   Combobox,
@@ -6,7 +5,7 @@ import {
   ComboboxOption,
   ComboboxOptions,
 } from "@headlessui/react";
-import LiquidGlass from "../components/LiquidGlass";
+import LiquidGlass from "./LiquidGlass";
 import appsConfig from "../data/config.json";
 
 const Launcher = ({

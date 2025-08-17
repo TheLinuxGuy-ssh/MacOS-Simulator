@@ -1,5 +1,4 @@
 import appsConfig from "../data/config.json";
-import "../css/applauncher.css";
 import { LiquidGlass } from ".";
 
 const AppLauncher = ({ state, onOpen, handleLauncher }) => {

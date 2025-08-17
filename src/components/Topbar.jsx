@@ -1,7 +1,7 @@
 import { DropdownMenu, Button, Theme } from "@radix-ui/themes";
 import { useState } from "react";
 import Config from "../data/config";
-import { DropItem, DropSeparator, Drop } from "../components/Drop";
+import { DropItem, DropSeparator, Drop } from "./Drop";
 import { useNavigate } from "react-router-dom";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";

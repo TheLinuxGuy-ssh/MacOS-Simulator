@@ -1,10 +1,9 @@
-import "../css/dock.css";
 import { useEffect, useState } from "react";
-import LiquidGlass from "../components/LiquidGlass";
+import LiquidGlass from "./LiquidGlass";
 import appsConfig from "../data/config.json";
 import { ReactSortable } from "react-sortablejs";
 
-const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
+const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront, setApps, apps }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const handleIconClick = (uid) => {
     onOpen(uid);
@@ -18,10 +17,6 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
   const handleMouseLeave = () => {
     setHoveredIndex(null);
   };
-  const [apps, setApps] = useState([]);
-  useEffect(() => {
-    setApps(appsConfig.app);
-  }, [])
 
   const scaleForIndex = (index) => {
     if (hoveredIndex === null) return "scale(1) translateY(0)";
@@ -50,32 +45,38 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
                 alt=""
               />
             </li>
-             <ReactSortable className="flex" list={apps} setList={setApps} animation={200} delay={2}>
-            {apps.map((item, index) => (
-              <li
-                key={item.uid}
-                className={`dock-li ${
-                  windowStates[item.uid].open ? `active` : ``
-                }`}
-              >
-                <div className="name">
-                  <LiquidGlass />
-                  {item.Name}
-                </div>
-                <img
-                  className="ico"
-                  src={item.Icon}
-                  alt={item.Name}
-                  style={{
-                    transform: scaleForIndex(index),
-                    transition: "transform 0.15s",
-                  }}
-                  onClick={() => handleIconClick(item.uid)}
-                  onMouseEnter={() => handleMouseOver(index)}
-                  onMouseLeave={handleMouseLeave}
-                />
-              </li>
-            ))}
+            <ReactSortable
+              className="flex"
+              list={apps}
+              setList={setApps}
+              animation={200}
+              delay={2}
+            >
+              {apps.map((item, index) => (
+                <li
+                  key={item.uid}
+                  className={`dock-li ${
+                    windowStates[item.uid].open ? `active` : ``
+                  }`}
+                >
+                  <div className="name">
+                    <LiquidGlass />
+                    {item.Name}
+                  </div>
+                  <img
+                    className="ico"
+                    src={item.Icon}
+                    alt={item.Name}
+                    style={{
+                      transform: scaleForIndex(index),
+                      transition: "transform 0.15s",
+                    }}
+                    onClick={() => handleIconClick(item.uid)}
+                    onMouseEnter={() => handleMouseOver(index)}
+                    onMouseLeave={handleMouseLeave}
+                  />
+                </li>
+              ))}
             </ReactSortable>
             <hr className="dock-separator" />
             <li className="dock-li">

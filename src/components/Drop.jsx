@@ -18,7 +18,7 @@ const Drop = ({ title, children, color, size, variant, className }) => {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger>
         <Button
-          key={null}
+          key={title}
           variant={variant == null ? "surface" : variant}
           color={color == null ? "gray" : color}
           size={size == null ? "1" : size}

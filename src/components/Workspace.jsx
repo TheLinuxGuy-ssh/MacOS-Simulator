@@ -1,16 +1,20 @@
 import { useState, useRef } from "react";
-import "../css/window.css";
 import config from "../data/config";
 import * as comp from ".";
 import * as Apps from "../apps";
 import * as Popups from "../popups";
 
-const componentMap = Apps;
-const componentPopup = Popups;
-
 const Workspace = () => {
-  const [dark, setDark] = useState(true)
-  const workspaceRef = useRef(null);
+  const appComponent = Apps;
+  const popupComponent = Popups;
+  const [dark, setDark] = useState(true);
+  const [launcher, setLauncher] = useState(false);
+  const [launcherState, setLauncherState] = useState(false);
+  const [focusedUid, setFocusUid] = useState(null);
+  const [apps, setApps] = useState(config.app);
+  const [popups, setPopups] = useState([]);
+  const [zIndexes, setZIndexes] = useState({});
+  const [maxZ, setMaxZ] = useState(1);
   const [windowStates, setWindowStates] = useState(
     Object.fromEntries(
       config.app.map((app) => [
@@ -30,14 +34,6 @@ const Workspace = () => {
       ])
     )
   );
-  const [launcher, setLauncher] = useState(false);
-  const [launcherState, setLauncherState] = useState(false);
-  const [focusedUid, setFocusUid] = useState(null);
-  const apps = config.app;
-  const popups = config.popup;
-
-  const [zIndexes, setZIndexes] = useState({});
-  const [maxZ, setMaxZ] = useState(1);
 
   const bringToFront = (uid) => {
     setFocusUid(uid);
@@ -105,7 +101,7 @@ const Workspace = () => {
 
   return (
     <>
-    <comp.Wallpaper dark={dark} />
+      <comp.Wallpaper dark={dark} />
       <div className="spotlight" onClick={() => setLauncher(false)}>
         <comp.Keybinds
           handleLauncher={handleLauncher}
@@ -118,12 +114,12 @@ const Workspace = () => {
           onClose={() => handleClose(focusedApp.uid)}
           onOpen={handleRestore}
           dark={dark}
-          setDark = {setDark}
+          setDark={setDark}
         />
         <div className="workspace">
           {apps.map((app) => {
             const AppComponent =
-              componentMap[app.Name] ||
+              appComponent[app.Name] ||
               (() => <div>Unknown App: {app.Name}</div>);
             return windowStates[app.uid]?.open ? (
               <comp.Window
@@ -148,7 +144,7 @@ const Workspace = () => {
             ) : null;
           })}
           {popups.map((popup) => {
-            const PopupComponent = componentPopup[popup.Name];
+            const PopupComponent = popupComponent[popup.Name];
             return windowStates[popup.uid]?.open ? (
               <comp.Window
                 key={popup.uid}
@@ -165,6 +161,8 @@ const Workspace = () => {
           })}
         </div>
         <comp.Dock
+          apps={apps}
+          setApps={setApps}
           windowStates={windowStates}
           onOpen={handleRestore}
           bringToFront={bringToFront}

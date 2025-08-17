@@ -1,4 +1,4 @@
-export { default as Desktop } from "../Desktop"
+export { default as Desktop } from "../assets/Desktop"
 export { default as Keybinds } from "./Keybinds"
 export { default as Splash } from "./Splash"
 export { default as Lock } from "./Lock"

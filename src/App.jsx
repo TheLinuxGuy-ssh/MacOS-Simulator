@@ -9,7 +9,8 @@ import {
 } from "react-router-dom";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
-import * as comp from "./assets/components";
+import * as comp from "./components";
+import "./assets/css"
 
 const Desktop = lazy(() => import("./assets/Desktop"));
 
