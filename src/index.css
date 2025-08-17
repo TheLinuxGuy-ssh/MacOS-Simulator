@@ -114,3 +114,7 @@ button:focus-visible {
   width: 100%;
   height: calc(100% - 35px);
 }
+
+.flex {
+  display: flex;
+}

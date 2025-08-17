@@ -1,7 +1,8 @@
 import "../css/dock.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LiquidGlass from "../components/LiquidGlass";
 import appsConfig from "../data/config.json";
+import { ReactSortable } from "react-sortablejs";
 
 const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -17,6 +18,10 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
   const handleMouseLeave = () => {
     setHoveredIndex(null);
   };
+  const [apps, setApps] = useState([]);
+  useEffect(() => {
+    setApps(appsConfig.app);
+  }, [])
 
   const scaleForIndex = (index) => {
     if (hoveredIndex === null) return "scale(1) translateY(0)";
@@ -45,7 +50,8 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
                 alt=""
               />
             </li>
-            {appsConfig.app.map((item, index) => (
+             <ReactSortable className="flex" list={apps} setList={setApps} animation={200} delay={2}>
+            {apps.map((item, index) => (
               <li
                 key={item.uid}
                 className={`dock-li ${
@@ -70,6 +76,7 @@ const Dock = ({ windowStates, onOpen, handleLauncher, bringToFront }) => {
                 />
               </li>
             ))}
+            </ReactSortable>
             <hr className="dock-separator" />
             <li className="dock-li">
               <div className="name">

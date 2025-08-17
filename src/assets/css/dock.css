@@ -114,6 +114,7 @@
   width: 100%;
   height: 100%;
   transition: 0.2s;
+  user-select: none !important;
 }
 .dock .dock-container .dock-li .ico.rounded-full {
 

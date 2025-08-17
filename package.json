@@ -28,8 +28,10 @@
     "react-point": "^3.0.1",
     "react-resizable": "^3.0.5",
     "react-router-dom": "^7.7.1",
+    "react-sortablejs": "^6.1.4",
     "react-terminal": "^1.4.5",
     "serve": "^14.2.4",
+    "sortablejs": "^1.15.6",
     "vite-jsconfig-paths": "^2.0.1"
   },
   "devDependencies": {
