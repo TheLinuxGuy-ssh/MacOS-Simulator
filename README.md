@@ -5,7 +5,7 @@ An online experience of macOS at the cost of nothing but Internet packets (prefe
 ![Vercel](https://vercelbadge.vercel.app/api/thelinuxguy-ssh/MacOS-Simulator)
 [![NPM License](https://img.shields.io/npm/l/all-contributors.svg?style=flat)](https://github.com/TheLinuxGuy-ssh/MacOS-Simulator/blob/main/LICENSE)
 
-<img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/c1f746a1-366c-4661-8a37-0adf49c33bdc" />
+<img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/c1f746a1-366c-4661-8a37-0adf49c33bdc](https://hc-cdn.hel1.your-objectstorage.com/s/v3/ab30ceedfa3e8e09b6c5739414b0636cf53c5662_darwinx.gif" />
 
 ## Features Added: 
 
