@@ -24,18 +24,18 @@ const Finder = () => {
         <div className="finder-topbar">
           <div className="topbar-start">
             <div className="dual-back-forward topbar-item">
-              <div className="back-btn">
+              <div className="back-btn finder-btn">
                 <i className="fa fa-chevron-left"></i>
               </div>
               <hr className="dual-separate" />
-              <div className="forward-btn">
+              <div className="forward-btn finder-btn">
                 <i className="fa fa-chevron-right"></i>
               </div>
             </div>
             <div className="active-directory topbar-item">Home</div>
           </div>
           <div className="topbar-end">
-            <div className="search-btn topbar-item">
+            <div className="search-btn topbar-item finder-btn">
               <i className="fa fa-search"></i>
             </div>
           </div>
