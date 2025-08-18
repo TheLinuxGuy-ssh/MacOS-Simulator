@@ -62,6 +62,11 @@
       "uid": 7,
       "Name": "Tips",
       "Icon": "./Tips.png"
+    },
+    {
+      "uid": 9,
+      "Name": "Windows",
+      "Icon": "./Windows.png"
     }
   ],
   "widget": [

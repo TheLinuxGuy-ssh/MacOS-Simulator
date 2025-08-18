@@ -1,0 +1,30 @@
+.Windows {
+  background: #008CFF;
+  min-width: 30rem;
+  min-height: 30rem;
+  width: 50rem !important;
+  height: 35rem !important;
+}
+
+.windows-main {
+  margin: 4% 25%;
+}
+
+.windows-emotion {
+  font-size: 8em;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.windows-description {
+  font-size: 1.4em;
+  margin-bottom: 3em;
+}
+
+.windows-footer {
+  margin-top: auto;
+}
+
+.windows-footer small {
+  font-size: 0.8em;
+}
