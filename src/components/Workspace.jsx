@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, Suspense } from "react";
 import config from "../data/config";
 import * as comp from ".";
 import * as Apps from "../apps";
@@ -141,7 +141,9 @@ const Workspace = () => {
                 onMinimize={() => handleMinimize(app.uid)}
                 onMaximize={() => handleMaximize(app.uid)}
               >
-                <AppComponent onAppOpen={handleRestore} />
+                <Suspense>
+                  <AppComponent onAppOpen={handleRestore} />
+                </Suspense>
               </comp.Window>
             ) : null;
           })}
@@ -157,7 +159,9 @@ const Workspace = () => {
                 bringToFront={bringToFront}
                 onClose={() => handleClose(popup.uid)}
               >
-                <PopupComponent />
+                <Suspense>
+                  <PopupComponent />
+                </Suspense>
               </comp.Window>
             ) : null;
           })}
