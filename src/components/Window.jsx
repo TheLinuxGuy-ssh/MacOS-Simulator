@@ -196,7 +196,7 @@ const Window = ({
           ) : (
             <>
               <div
-                className="window-btn maximise"
+                className="window-btn minimise"
                 onMouseDown={(e) => e.stopPropagation()}
                 onClick={(e) => {
                   e.stopPropagation();
@@ -221,7 +221,7 @@ const Window = ({
                 </svg>
               </div>
               <div
-                className="window-btn minimise window-btn-control"
+                className="window-btn maximise window-btn-control"
                 onMouseDown={(e) => e.stopPropagation()}
                 onClick={(e) => {
                   e.stopPropagation();

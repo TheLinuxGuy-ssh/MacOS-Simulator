@@ -76,11 +76,11 @@
     background-color: #FF605C;
 }
 
-.window-btn.maximise {
+.window-btn.minimise {
     background-color: yellow;
 }
 
-.window-btn.minimise {
+.window-btn.maximise {
     background-color: #00CA4E;
 }
 

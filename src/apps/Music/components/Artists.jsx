@@ -3,6 +3,7 @@
 const Artists = () => {
     return (
         <>
+        artistss
         </>
     )
 }

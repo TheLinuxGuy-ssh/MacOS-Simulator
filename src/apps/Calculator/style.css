@@ -13,7 +13,7 @@
     display: none;
 }
 
-.window.Calculator .minimise {
+.window.Calculator .maximise {
     display: none !important;
 }
 

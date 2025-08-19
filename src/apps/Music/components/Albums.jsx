@@ -3,6 +3,7 @@
 const Albums = () => {
     return (
         <>
+        albumss
         </>
     )
 }
