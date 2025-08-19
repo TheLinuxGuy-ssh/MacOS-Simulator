@@ -1,0 +1,24 @@
+{
+    "Tabs": [
+        {
+            "uid": 1,
+            "Name": "Artists",
+            "Icon": "LayersIcon"
+        },
+        {
+            "uid": 2,
+            "Name": "Albums",
+            "Icon": "LayersIcon"
+        },
+        {
+            "uid": 3,
+            "Name": "Songs",
+            "Icon": "LayersIcon"
+        },
+        {
+            "uid": 4,
+            "Name": "Playlists",
+            "Icon": "LayersIcon"
+        }
+    ]
+}

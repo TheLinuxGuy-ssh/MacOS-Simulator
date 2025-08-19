@@ -1,0 +1,39 @@
+.Music .window-content {
+    height: 100%;
+    margin: 0;
+}
+
+.Music .music-container {
+    height: 100%;
+    display: flex;
+}
+
+.Music .music-sidebar {
+    width: 20rem;
+    position: relative;
+    height: 100%;
+}
+
+.Music .music-sidebar-container {
+    padding: 3rem 0.75rem;
+}
+
+.Music .music-sidebar-item {
+    width: 100%;
+    transition: 0.1s;
+    border-radius: 0.5rem;
+    padding: 0.3rem 0;
+    margin: 0.25rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.Music .music-sidebar .fa {
+    margin: 0 0.5rem;
+    color: #ee4956;
+}
+
+.Music .music-sidebar-item:hover {
+    background: var(--app-liquid-glass-bg);
+    box-shadow: var(--app-liquid-glass-shadow-thin);
+}

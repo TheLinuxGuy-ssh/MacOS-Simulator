@@ -3,7 +3,7 @@ import { LiquidGlass } from "../../components";
 
 const Finder = () => {
   return (
-    <div className="finder" UID="1">
+    <div className="finder">
       <div className="sidebar">
         <LiquidGlass />
         <div className="sidebar-items">
@@ -12,12 +12,7 @@ const Finder = () => {
             <div className="sidebar-item">Documents</div>
             <div className="sidebar-item">Downloads</div>
           </div>
-          <div className="sidebar-tags">
-            <div className="sidebar-tag">
-              <div className="tag-dot"></div>
-              Home
-            </div>
-          </div>
+
         </div>
       </div>
       <div className="finder-main">
