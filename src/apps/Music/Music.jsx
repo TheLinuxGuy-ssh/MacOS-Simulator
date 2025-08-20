@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "../../../utils/supabase";
 import config from "./config";
 import * as Pages from "./components";
 import "./assets/style.css";
