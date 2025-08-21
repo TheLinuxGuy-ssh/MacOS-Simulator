@@ -18,9 +18,10 @@
 .Music .music-sidebar {
     width: 20rem;
     position: relative;
-    height: calc(100%-2rem);
-    margin: 1rem 0;
-    border: 1px solid ;
+    height: calc(100%-0.5rem);
+    margin: 0.25rem 0.25rem;
+    border-radius: 1.8rem;
+    box-shadow: var(--app-liquid-glass-shadow);
 }
 
 .Music .music-profile {
@@ -60,4 +61,8 @@
 }
 .Music .music-sidebar-item.active {
         background: #ee4956;
+}
+
+.song-item img {
+    display: block;
 }

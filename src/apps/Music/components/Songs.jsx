@@ -20,13 +20,14 @@ const Songs = () => {
 
     return (
         <>
-        Songss
-        {songList.map((song) => {
-            <div key={song.id}>
+        {songList.length == 0  ? (<> No Songs found </>) : (
+        songList.map((song) => (
+            <div className="song-item" key={song.id}>
+                <img src={song.imgPath} width={200} alt="" />
             {song.Name}
-            what
             </div>
-        })}
+        ))
+        )} 
         </>
     )
 }
