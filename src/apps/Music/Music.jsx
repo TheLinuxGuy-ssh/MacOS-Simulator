@@ -9,7 +9,7 @@ import parse, { domToReact } from "html-react-parser";
 
 const Music = () => {
     const pagesMap = Pages;
-    const [activeTab, setActiveTab] = useState(1); 
+    const [activeTab, setActiveTab] = useState(5); 
     const tabs = config.Tabs;
     return (
         <>
