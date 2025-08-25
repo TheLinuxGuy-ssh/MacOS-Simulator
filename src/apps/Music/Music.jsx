@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { supabase } from "../../../utils/supabase";
 import config from "./config";
 import * as Pages from "./components";
@@ -6,11 +6,17 @@ import "./assets/style.css";
 import { LiquidGlass } from "../../components";
 import { HomeIcon, LayersIcon, MagnifyingGlassIcon, DashboardIcon, SpeakerLoudIcon } from "@radix-ui/react-icons"
 import parse, { domToReact } from "html-react-parser";
+import ReactAudioPlayer from "react-audio-player";
 
 const Music = () => {
     const pagesMap = Pages;
-    const [activeTab, setActiveTab] = useState(5); 
+    const audioRef = useRef();
+    const [activeTab, setActiveTab] = useState(5);
+    const [activeSong, setActiveSong] = useState('/default.mp3') 
     const tabs = config.Tabs;
+    const handleActiveSong = (path) => {
+        setActiveSong(path);
+    } 
     return (
         <>
           <div className="music-container">
@@ -40,6 +46,11 @@ const Music = () => {
                     </div>
                 </div>  
                 <div className="music-content">
+                            <ReactAudioPlayer
+                                src={activeSong}
+                                autoPlay
+                                controls
+                            />
                     <div className="music-topbar">
                         <h2 className="current-page-title">
                             {tabs.map((tab) => tab.uid === activeTab ? (
@@ -55,7 +66,7 @@ const Music = () => {
                         const PageComponent = pagesMap[tab.Name] || (() => <div>Unknown App: {tab.Name}</div>);
                             return (
                             <div>
-                                    <PageComponent />
+                                    <PageComponent activeSong={handleActiveSong} />
                             </div>
                             )
                         })}

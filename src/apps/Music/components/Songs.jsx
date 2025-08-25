@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
+import ReactAudioPlayer from "react-audio-player";
 import { supabase } from "../../../../utils/supabase"
 
-const Songs = () => {
+const Songs = ({ audioRef, activeSong }) => {
 
     const [songList, setSongList] = useState([]);
     
@@ -13,16 +14,19 @@ const Songs = () => {
             setSongList(data);
         }
     }
+    const handleActiveSong = (path) => {
+        activeSong(path);
+    }
 
     useEffect(() => {
         fetchSongs();
     }, [])
-
     return (
         <>
+
         {songList.length == 0  ? (<> No Songs found </>) : (
         songList.map((song) => (
-            <div className="song-item" key={song.id}>
+            <div className="song-item" key={song.id} onClick={() => handleActiveSong(song.Path)}>
                 <img src={song.imgPath} width={200} alt="" />
             {song.Name}
             </div>
